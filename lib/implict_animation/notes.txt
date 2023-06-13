@@ -1,2 +1,2 @@
-implicit animation is the setting of new value of a widget property , then
-animating it from the old value to the new value. 
+* Implicit animation is the setting of new value of a widget property , then
+* Animating it from the old value to the new value. 

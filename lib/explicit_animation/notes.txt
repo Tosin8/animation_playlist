@@ -1,1 +1,3 @@
-explicit animation involves an animaiton controller. 
+* Explicit animation involves an animation controller. 
+* They start animating when they are explicitly asked to. 
+* Being able to manage the lifecycle of the animation since it's not  a widget, putting it inside a stateful widget. 
