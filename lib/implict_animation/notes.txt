@@ -1,2 +1,7 @@
 * Implicit animation is the setting of new value of a widget property , then
 * Animating it from the old value to the new value. 
+
+* Ponder: 
+ - Using Built-in Implicit animation: when there's an animated widget to getting the job
+ done - using animated foo: (animated container). 
+ - Using TweenAnimationBuilder: to create custom Implicit animation. 

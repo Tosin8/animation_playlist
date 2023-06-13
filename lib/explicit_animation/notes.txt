@@ -1,3 +1,10 @@
 * Explicit animation involves an animation controller. 
 * They start animating when they are explicitly asked to. 
-* Being able to manage the lifecycle of the animation since it's not  a widget, putting it inside a stateful widget. 
+* Being able to manage the lifecycle of the animation since it's not  a widget, putting it inside a stateful widget.
+
+Ponder: 
+ - Built-in explicit animation: usually called foo transition whose properties is the one being animated.
+ - Custom explicit animation:  the decision to be a standalone widget or to be surrounded with another widgets. 
+    - For standalone animation using 'AnimatedWidget' otherwise 'AnimatedBuilder'
+
+    Having a performance problem using: CustomPainter - paint directly into the canvas, creating extremely performance effect. 
