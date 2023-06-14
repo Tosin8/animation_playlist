@@ -25,6 +25,12 @@ class _StarState extends State<Star> {
         children: [
           Container(
             width: _bigger ? 100 : 500,
+          ),
+          ElevatedButton(
+            onPressed: () => setState(() {
+              _bigger = !_bigger;
+            }),
+            child: const Icon(Icons.star),
           )
         ],
       ),
