@@ -14,24 +14,35 @@ class _Avatar_GlowState extends State<Avatar_Glow> {
     return Scaffold(
       backgroundColor: Colors.blue,
       body: Center(
-        child: AvatarGlow(
-            glowColor: Colors.white,
-            endRadius: 120,
-            duration: const Duration(seconds: 2),
-            repeat: true,
-            showTwoGlows: true,
-            curve: Curves.easeOutQuad,
-            child: Container(
-              height: 80,
-              width: 80,
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(99)),
-              child: const Icon(
-                Icons.favorite,
-                color: Colors.blue,
-                size: 40,
-              ),
-            )),
+        child: Column(children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 30),
+            child: AvatarGlow(
+                glowColor: Colors.white,
+                endRadius: 120,
+                duration: const Duration(seconds: 2),
+                repeat: true,
+                showTwoGlows: true,
+                curve: Curves.easeOutQuad,
+                child: Container(
+                  height: 80,
+                  width: 80,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(99)),
+                  child: const Icon(
+                    Icons.favorite,
+                    color: Colors.blue,
+                    size: 40,
+                  ),
+                )),
+          ),
+          const Text(
+            'That\'s the end of the love',
+            style: TextStyle(
+                fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white),
+          ),
+        ]),
       ),
     );
   }
