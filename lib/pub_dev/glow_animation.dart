@@ -11,6 +11,28 @@ class Avatar_Glow extends StatefulWidget {
 class _Avatar_GlowState extends State<Avatar_Glow> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      body: Center(
+        child: AvatarGlow(
+            glowColor: Colors.white,
+            endRadius: 120,
+            duration: const Duration(seconds: 2),
+            repeat: true,
+            showTwoGlows: true,
+            curve: Curves.easeOutQuad,
+            child: Container(
+              height: 80,
+              width: 80,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(99)),
+              child: const Icon(
+                Icons.favorite,
+                color: Colors.blue,
+                size: 40,
+              ),
+            )),
+      ),
+    );
   }
 }
