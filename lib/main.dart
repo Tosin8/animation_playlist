@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'implict_animation/star.dart';
+import 'pub_dev/glow_animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Star(),
+      home: const Avatar_Glow(),
     );
   }
 }
