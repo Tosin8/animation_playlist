@@ -1,6 +1,5 @@
+import 'package:animation_playlist/pub_dev/list_view_1.dart';
 import 'package:flutter/material.dart';
-
-import 'pub_dev/glow_animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Avatar_Glow(),
+      home: const ListView_1(),
     );
   }
 }
