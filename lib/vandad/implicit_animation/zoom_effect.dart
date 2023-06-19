@@ -13,10 +13,26 @@ class _Zoom_EffectState extends State<Zoom_Effect> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Zoom Effect'),
+          title: const Text(
+            'Zoom Effect',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.blue,
+          elevation: 0,
         ),
-        body: const Column(
-          children: [],
+        body: Column(
+          children: [
+            Container(
+              child: Image.network(
+                  'https://images.unsplash.com/photo-1686824579901-9c90fd95b086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(onPressed: () {}, child: Text('Zoom In')),
+          ],
         ));
   }
 }
