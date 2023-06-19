@@ -9,7 +9,7 @@ class Star extends StatefulWidget {
 
 class _StarState extends State<Star> {
   // ignore: prefer_typing_uninitialized_variables
-  late final _bigger;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
