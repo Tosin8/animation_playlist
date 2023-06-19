@@ -36,6 +36,7 @@ class _Zoom_EffectState extends State<Zoom_Effect> {
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             AnimatedContainer(
+              duration: const Duration(seconds: 3),
               width: _width,
               child: Image.network(
                   'https://images.unsplash.com/photo-1686824579901-9c90fd95b086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80'),
