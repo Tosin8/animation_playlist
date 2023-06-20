@@ -11,7 +11,7 @@ const defaultWidth = 300.0;
 
 // ignore: camel_case_types
 class _Zoom_EffectState extends State<Zoom_Effect> {
-  var _isZoomedIn = false;
+  var _isZoomedIn = false; // false by default
   var _buttonTitle = 'Zoom In';
 
   var _width = defaultWidth;
@@ -57,7 +57,9 @@ class _Zoom_EffectState extends State<Zoom_Effect> {
               onPressed: () {
                 setState(() {
                   _isZoomedIn = !_isZoomedIn;
-                  _buttonTitle = _isZoomedIn ? 'Zoom Out' : 'Zoom In';
+                  _buttonTitle = _isZoomedIn
+                      ? 'Zoom Out'
+                      : 'Zoom In'; // If we are zooming in then show zooming out text by default.
                   _width = _isZoomedIn
                       ? MediaQuery.of(context).size.width
                       : defaultWidth;
