@@ -1,3 +1,4 @@
+import 'package:animation_playlist/implict_animation/star_1.dart';
 import 'package:animation_playlist/pub_dev/list_view_1.dart';
 import 'package:animation_playlist/vandad/implicit_animation/zoom_effect.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Star(),
+      home: const Star_1(),
     );
   }
 }
