@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 class Star_1 extends StatefulWidget {
   const Star_1({super.key});
