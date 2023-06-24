@@ -1,9 +1,5 @@
 import 'package:animation_playlist/implict_animation/tween_builder/star_1.dart';
-import 'package:animation_playlist/pub_dev/list_view_1.dart';
-import 'package:animation_playlist/vandad/implicit_animation/zoom_effect.dart';
 import 'package:flutter/material.dart';
-
-import 'implict_animation/star.dart';
 
 void main() {
   runApp(const MyApp());
