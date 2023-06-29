@@ -1,3 +1,4 @@
+import 'package:animation_playlist/implict_animation/checklist.dart';
 import 'package:animation_playlist/implict_animation/tween_builder/star_1.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Star_1(),
+      home: const TaskList(),
     );
   }
 }
