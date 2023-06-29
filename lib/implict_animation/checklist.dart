@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TaskList extends StatelessWidget {
+class TaskList extends StatefulWidget {
   const TaskList({super.key});
 
+  @override
+  State<TaskList> createState() => _TaskListState();
+}
+
+class _TaskListState extends State<TaskList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,16 +28,22 @@ class TaskList extends StatelessWidget {
   }
 }
 
-class TaskItem extends StatelessWidget {
+class TaskItem extends StatefulWidget {
   final String label;
   const TaskItem({super.key, required this.label});
 
+  @override
+  State<TaskItem> createState() => _TaskItemState();
+}
+
+class _TaskItemState extends State<TaskItem> {
+  bool? _value = false;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         const Checkbox(value: false, onChanged: null),
-        Text(label),
+        Text(widget.label),
       ],
     );
   }
