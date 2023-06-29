@@ -1,5 +1,5 @@
 import 'package:animation_playlist/implict_animation/checklist.dart';
-import 'package:animation_playlist/implict_animation/tween_builder/star_1.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
