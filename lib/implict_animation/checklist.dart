@@ -12,11 +12,11 @@ class TaskList extends StatelessWidget {
       body: const Column(
         children: [
           TaskItem(label: 'Load rocket with supplies'),
-          TaskItem(label: 'Load rocket with supplies'),
-          TaskItem(label: 'Load rocket with supplies'),
-          TaskItem(label: 'Load rocket with supplies'),
-          TaskItem(label: 'Load rocket with supplies'),
-          TaskItem(label: 'Load rocket with supplies'),
+          TaskItem(label: 'Launch rocket'),
+          TaskItem(label: 'Circle the home planet'),
+          TaskItem(label: 'Head out to the moon'),
+          TaskItem(label: 'Build a port supply for mission mars'),
+          TaskItem(label: 'Launch moon landers'),
         ],
       ),
     );
