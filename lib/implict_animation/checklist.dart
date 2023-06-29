@@ -7,10 +7,15 @@ class TaskList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('To Do List'),
+        title: const Text('To Do List'),
       ),
-      body: Column(
+      body: const Column(
         children: [
+          TaskItem(label: 'Load rocket with supplies'),
+          TaskItem(label: 'Load rocket with supplies'),
+          TaskItem(label: 'Load rocket with supplies'),
+          TaskItem(label: 'Load rocket with supplies'),
+          TaskItem(label: 'Load rocket with supplies'),
           TaskItem(label: 'Load rocket with supplies'),
         ],
       ),
@@ -26,7 +31,7 @@ class TaskItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Checkbox(value: false, onChanged: null),
+        const Checkbox(value: false, onChanged: null),
         Text(label),
       ],
     );
