@@ -12,7 +12,15 @@ class _TaskListState extends State<TaskList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('To Do List'),
+        backgroundColor: Colors.blue,
+        title: const Text(
+          'Space Exploration CheckList',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+        centerTitle: true,
       ),
       body: const Column(
         children: [
@@ -42,7 +50,12 @@ class _TaskItemState extends State<TaskItem> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Checkbox(value: false, onChanged: null),
+        Checkbox(
+          value: false,
+          onChanged: (newValue) => setState(() {
+            _value = newValue;
+          }),
+        ),
         Text(widget.label),
       ],
     );
