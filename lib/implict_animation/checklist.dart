@@ -55,6 +55,7 @@ class _TaskItemState extends State<TaskItem> {
           onChanged: (newValue) => setState(() {
             _value = newValue;
           }),
+          value: _value,
         ),
         Text(widget.label),
       ],
