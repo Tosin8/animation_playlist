@@ -51,7 +51,6 @@ class _TaskItemState extends State<TaskItem> {
     return Row(
       children: [
         Checkbox(
-          value: false,
           onChanged: (newValue) => setState(() {
             _value = newValue;
           }),
