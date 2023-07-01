@@ -1,3 +1,4 @@
+import 'package:animation_playlist/bottom_nav.dart';
 import 'package:animation_playlist/implict_animation/checklist.dart';
 
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const TaskList(),
+      home: const Nav_Bar(),
     );
   }
 }
