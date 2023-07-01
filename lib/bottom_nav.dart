@@ -30,13 +30,29 @@ class _Nav_BarState extends State<Nav_Bar> {
         ),
         child: ListView.builder(
           itemCount: 4,
-          scrollDirection: Axis.horizontal(Vert,
-          itemBuilder: (context, index) => InkWell(onTap: () {
-            setState(() {
-              currentIndex = index;
-              HapticFeedback.lightImpact();
-            });
-          }),
+          scrollDirection: Axis.horizontal,
+          padding: EdgeInsets.symmetric(horizontal: screenWidth * .024),
+          itemBuilder: (context, index) => InkWell(
+            onTap: () {
+              setState(() {
+                currentIndex = index;
+                HapticFeedback.lightImpact();
+              });
+            },
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            child: Stack(
+              children: [
+                SizedBox(
+                  width: screenWidth * .2125,
+                  child: Center(
+                    child:
+                        AnimatedContainer(duration: const Duration(seconds: 1)),
+                  ),
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );
