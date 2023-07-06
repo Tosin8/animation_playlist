@@ -1,4 +1,5 @@
 import 'package:animation_playlist/bottom_nav.dart';
+import 'package:animation_playlist/explicit_animation/galaxy.dart';
 import 'package:animation_playlist/implict_animation/checklist.dart';
 
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Nav_Bar(),
+      home: const Rotating_Galaxy(),
     );
   }
 }

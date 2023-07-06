@@ -11,8 +11,15 @@ class _Rotating_GalaxyState extends State<Rotating_Galaxy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Image(image: 'assets/images/Rotating_Galaxy.jpg'),
+      body: RotationTransition(
+        turns: 
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          child: Image.asset(
+            'assets/images/galaxy.jpg',
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
     );
   }
