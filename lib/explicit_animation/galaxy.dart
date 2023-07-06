@@ -13,6 +13,15 @@ class _Rotating_GalaxyState extends State<Rotating_Galaxy> {
   AnimationController _animationController;
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _animationController = AnimationController{
+
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: RotationTransition(
