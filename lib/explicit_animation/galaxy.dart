@@ -8,11 +8,15 @@ class Rotating_Galaxy extends StatefulWidget {
 }
 
 class _Rotating_GalaxyState extends State<Rotating_Galaxy> {
+// Creating an explicit animation.
+
+  AnimationController _animationController;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: RotationTransition(
-        turns: 
+        turns: 1,
         child: Container(
           height: MediaQuery.of(context).size.height,
           child: Image.asset(
