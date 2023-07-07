@@ -8,7 +8,7 @@ class ExplicitAnimations extends StatefulWidget {
   State<ExplicitAnimations> createState() => _ExplicitAnimationsState();
 }
 
-// explicit animations with ready to use widgets.
+// explicit animations with ready to use widgets - foo widgets.
 class _ExplicitAnimationsState extends State<ExplicitAnimations>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
