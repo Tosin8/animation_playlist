@@ -10,15 +10,17 @@ class Rotating_Galaxy extends StatefulWidget {
 class _Rotating_GalaxyState extends State<Rotating_Galaxy> {
 // Creating an explicit animation.
 
-  AnimationController _animationController;
+  late AnimationController _animationController;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     _animationController = AnimationController{
+      duration: const Duration(seconds: 5); 
+      vsync: 
 
-    }
+    };
   }
 
   @override
