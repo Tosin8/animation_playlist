@@ -7,7 +7,8 @@ class Rotating_Galaxy extends StatefulWidget {
   State<Rotating_Galaxy> createState() => _Rotating_GalaxyState();
 }
 
-class _Rotating_GalaxyState extends State<Rotating_Galaxy> {
+class _Rotating_GalaxyState extends State<Rotating_Galaxy> 
+with SingleTickerProviderStateMixin{
 // Creating an explicit animation.
 
   late AnimationController _animationController;
@@ -16,18 +17,19 @@ class _Rotating_GalaxyState extends State<Rotating_Galaxy> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _animationController = AnimationController{
-      duration: const Duration(seconds: 5); 
-      vsync: 
 
-    };
+    _animationController = AnimationController(
+      duration: const Duration(seconds: 5), 
+      vsync: this, 
+
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: RotationTransition(
-        turns: 1,
+        turns: 
         child: Container(
           height: MediaQuery.of(context).size.height,
           child: Image.asset(
