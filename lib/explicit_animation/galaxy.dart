@@ -22,7 +22,7 @@ with SingleTickerProviderStateMixin{
       duration: const Duration(seconds: 5), 
       vsync: this, 
 
-    );
+    )..repeat(); // asking the controller to keep repeating the animation
   }
 
   @override
