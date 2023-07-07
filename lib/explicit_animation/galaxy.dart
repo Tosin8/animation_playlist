@@ -60,6 +60,21 @@ class TimeStopper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector()
+    return GestureDetector(
+      onTap: () {
+        if (controller.isAnimating) {
+          controller.stop();
+        } else {
+          controller.repeat();
+        }
+      },
+      child: Container(
+        decoration: const BoxDecoration(
+          color: Colors.transparent,
+        ),
+        width: 100,
+        height: 100,
+      ),
+    );
   }
 }
