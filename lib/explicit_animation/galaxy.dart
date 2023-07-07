@@ -53,3 +53,13 @@ class _Rotating_GalaxyState extends State<Rotating_Galaxy>
     );
   }
 }
+
+class TimeStopper extends StatelessWidget {
+  final AnimationController controller;
+  const TimeStopper({super.key, required this.controller});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector()
+  }
+}
