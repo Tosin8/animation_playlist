@@ -8,6 +8,7 @@ class ExplicitAnimations extends StatefulWidget {
   State<ExplicitAnimations> createState() => _ExplicitAnimationsState();
 }
 
+// explicit animations with ready to use widgets.
 class _ExplicitAnimationsState extends State<ExplicitAnimations>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
@@ -62,6 +63,9 @@ class _ExplicitAnimationsState extends State<ExplicitAnimations>
           turns: _rotationAnimation,
           child: BlurryContainer.square(
             child: Container(
+              decoration: BoxDecoration(
+                color: Colors.pink,
+              ),
               width: 120,
               height: 120,
             ),
