@@ -30,12 +30,6 @@ class _Rotating_GalaxyState extends State<Rotating_Galaxy>
     return Scaffold(
       body: Stack(children: [
         Align(
-          alignment: Alignment.bottomLeft,
-          child: TimeStopper(
-            controller: _animationController,
-          ),
-        ),
-        Align(
           alignment: Alignment.center,
           child: Container(
             height: MediaQuery.of(context).size.height,
@@ -47,6 +41,12 @@ class _Rotating_GalaxyState extends State<Rotating_Galaxy>
                 fit: BoxFit.cover,
               ),
             ),
+          ),
+        ),
+        Align(
+          alignment: Alignment.bottomLeft,
+          child: TimeStopper(
+            controller: _animationController,
           ),
         ),
       ]),
@@ -69,9 +69,7 @@ class TimeStopper extends StatelessWidget {
         }
       },
       child: Container(
-        decoration: const BoxDecoration(
-          color: Colors.transparent,
-        ),
+        child: Icon(Icons.draw),
         width: 100,
         height: 100,
       ),
