@@ -55,16 +55,16 @@ class _ExplicitAnimationsState extends State<ExplicitAnimations>
       elevation: 0,
       color: Colors.transparent,
       padding: const EdgeInsets.all(8),
-      borderRadius: const BorderRadius.all(Radius.circular(20)),
+      borderRadius: BorderRadius.all(Radius.circular(20)),
       child: AlignTransition(
         alignment: _alignAnimation,
         child: RotationTransition(
           turns: _rotationAnimation,
-          child: const Rectangle(
-            color1: pink,
-            color2: pinkDark,
-            width: 50,
-            height: 50,
+          child: BlurryContainer.square(
+            child: Container(
+              width: 120,
+              height: 120,
+            ),
           ),
         ),
       ),
