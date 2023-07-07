@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// using explicit with animatd builder widget since there's no gradientTransitin widget.
+
 class AnimatedBuilderExample extends StatefulWidget {
   const AnimatedBuilderExample({Key? key}) : super(key: key);
 
@@ -13,11 +15,11 @@ class _AnimatedBuilderExampleState extends State<AnimatedBuilderExample>
 
   @override
   void initState() {
+    super.initState();
     _controller = AnimationController(
       duration: const Duration(milliseconds: 500),
       vsync: this,
     )..repeat(reverse: true);
-    super.initState();
   }
 
   @override
@@ -35,7 +37,7 @@ class _AnimatedBuilderExampleState extends State<AnimatedBuilderExample>
           height: 100,
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: const [purple, pink, yellow],
+              colors: const [Colors.purple, Colors.pink, Colors.yellow],
               stops: [0, _controller.value, 1],
             ),
             borderRadius: BorderRadius.circular(15),
