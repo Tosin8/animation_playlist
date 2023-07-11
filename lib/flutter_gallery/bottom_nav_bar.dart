@@ -11,7 +11,11 @@ class _Bottom_Nav_1State extends State<Bottom_Nav_1> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar:AppBar(), 
+      appBar:AppBar(
+        title: Text (' Hello '), 
+        
+      ), 
+      body: (), 
     );
   }
 }
