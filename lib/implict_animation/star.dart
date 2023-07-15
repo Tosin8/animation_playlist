@@ -25,6 +25,7 @@ class _StarState extends State<Star> {
         ),
         centerTitle: true,
       ),
+      
       body: Column(
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
