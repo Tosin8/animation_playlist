@@ -1,0 +1,14 @@
+[
+
+    {
+        "name": "Big Company",
+        "numberOfEmployees": 1000, 
+        "ceo": "Mary"
+    }, 
+
+    {
+"name" : "Snall Company", 
+"ceo" : "James"
+    }
+]
+
