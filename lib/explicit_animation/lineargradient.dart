@@ -25,8 +25,10 @@ class _AnimatedBuilderExampleState extends State<AnimatedBuilderExample>
   @override
   void dispose() {
     _controller.dispose();
-    super.dispose();f
-  }dd  @override
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _controller,
