@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class AnimatedContainerStar extends StatefulWidget {
   const AnimatedContainerStar({super.key});
@@ -8,52 +9,33 @@ class AnimatedContainerStar extends StatefulWidget {
 }
 
 class _AnimatedContainerStarState extends State<AnimatedContainerStar> {
-  bool _bigger = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Implicit Animation',
+          'Custom Implicit Animation',
           style: TextStyle(color: Colors.white),
         ),
         elevation: 3,
         backgroundColor: Colors.blue,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: AnimatedContainer(
-              width: _bigger ? 80 : 120,
-              duration: const Duration(seconds: 500),
-              curve: Curves.bounceIn,
-              child: Image.asset(
-                'assets/images/star.png',
-
-                // color: _bigger ? Colors.green : Colors.blue,
-              ),
-            ),
-          ),
-          const SizedBox(height: 20),
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                _bigger = !_bigger;
-              });
-            },
-            child: Container(
-                width: 100,
-                height: 30,
-                decoration: const BoxDecoration(color: Colors.blue),
-                child: const Text(
-                  'Enlargement',
-                  style: TextStyle(color: Colors.white),
-                )),
-          )
-        ],
-      ),
+      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        TweenAnimationBuilder(
+            duration: const Duration(seconds: 100),
+            tween: Tween<double>(begin: 0, end: 180),
+            builder: (_, double angle, __) {
+              return Transform.rotate(
+                angle: angle,
+                child: Center(
+                  child: Image.asset(
+                    'assets/images/star.png',
+                    width: 120,
+                  ),
+                ),
+              );
+            })
+      ]),
     );
   }
 }
