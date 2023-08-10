@@ -15,7 +15,7 @@ class _AnimatedContainerStarState extends State<AnimatedContainerStar> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Custom Implicit Animation',
+          'Explicit Animation',
           style: TextStyle(color: Colors.white),
         ),
         elevation: 3,
