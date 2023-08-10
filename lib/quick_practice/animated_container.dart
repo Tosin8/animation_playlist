@@ -9,6 +9,7 @@ class AnimatedContainerStar extends StatefulWidget {
 }
 
 class _AnimatedContainerStarState extends State<AnimatedContainerStar> {
+  final figureRotate = Tween<double>(begin: 0, end: 180);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +24,7 @@ class _AnimatedContainerStarState extends State<AnimatedContainerStar> {
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         TweenAnimationBuilder(
             duration: const Duration(seconds: 100),
-            tween: Tween<double>(begin: 0, end: 180),
+            tween: figureRotate,
             builder: (_, double angle, __) {
               return Transform.rotate(
                 angle: angle,
