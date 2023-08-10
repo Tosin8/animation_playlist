@@ -10,6 +10,10 @@ class AnimatedContainerStar extends StatefulWidget {
 class _AnimatedContainerStarState extends State<AnimatedContainerStar> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Implicit Animation'),
+      ),
+    );
   }
 }
