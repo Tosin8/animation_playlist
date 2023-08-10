@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 class AnimatedContainerStar extends StatefulWidget {
   const AnimatedContainerStar({super.key});
@@ -8,8 +7,19 @@ class AnimatedContainerStar extends StatefulWidget {
   State<AnimatedContainerStar> createState() => _AnimatedContainerStarState();
 }
 
-class _AnimatedContainerStarState extends State<AnimatedContainerStar> {
-  final figureRotate = Tween<double>(begin: 0, end: 180);
+class _AnimatedContainerStarState extends State<AnimatedContainerStar>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _animationController;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _animationController = AnimationController(
+      duration: const Duration(seconds: 15),
+      vsync: this,
+    )..repeat();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,20 +32,16 @@ class _AnimatedContainerStarState extends State<AnimatedContainerStar> {
         backgroundColor: Colors.blue,
       ),
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        TweenAnimationBuilder(
-            duration: const Duration(seconds: 100),
-            tween: figureRotate,
-            builder: (_, double angle, __) {
-              return Transform.rotate(
-                angle: angle,
-                child: Center(
-                  child: Image.asset(
-                    'assets/images/star.png',
-                    width: 120,
-                  ),
-                ),
-              );
-            })
+        RotationTransition(
+          alignment: Alignment.center,
+          turns: _animationController,
+          child: Center(
+            child: Image.asset(
+              'assets/images/star.png',
+              width: 120,
+            ),
+          ),
+        ),
       ]),
     );
   }
