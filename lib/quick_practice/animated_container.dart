@@ -45,4 +45,10 @@ class _AnimatedContainerStarState extends State<AnimatedContainerStar>
       ]),
     );
   }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
 }
