@@ -40,6 +40,11 @@ class _Animated_ContainerState extends State<Animated_Container> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text(
+          'Shape Change',
+          style: TextStyle(color: Colors.white),
+        ),
+        centerTitle: true,
         backgroundColor: Colors.blue,
       ),
       body: Center(
