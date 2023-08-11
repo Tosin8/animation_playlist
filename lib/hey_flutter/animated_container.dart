@@ -10,6 +10,8 @@ class Animated_Container extends StatefulWidget {
 class _Animated_ContainerState extends State<Animated_Container> {
   double boxHeight = 100;
   double boxWidth = 100;
+  Color boxColor = Colors.deepPurple;
+  BorderRadius _borderRadius = BorderRadius.circular(8);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
