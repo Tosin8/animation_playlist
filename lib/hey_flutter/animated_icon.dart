@@ -13,9 +13,11 @@ class _Animated_IconState extends State<Animated_Icon>
   @override
   void initState() {
     // TODO: implement initState
-    super.initState(_animationController = AnimationController(
+    super.initState();
+    _animationController = AnimationController(
+      duration: const Duration(seconds: 5),
       vsync: this,
-    ));
+    );
   }
 
   @override
@@ -34,5 +36,11 @@ class _Animated_IconState extends State<Animated_Icon>
           icon: AnimatedIcons.home_menu,
           progress: _animationController,
         )));
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
   }
 }
