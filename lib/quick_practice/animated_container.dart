@@ -8,6 +8,8 @@ class AnimatedImages extends StatefulWidget {
 }
 
 class _AnimatedImagesState extends State<AnimatedImages> {
+  bool _bigger = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,17 +30,24 @@ class _AnimatedImagesState extends State<AnimatedImages> {
               width: 100,
             )),
             SizedBox(height: 10),
-            Container(
-              width: 100,
-              height: 50,
-              decoration: const BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: const Align(
-                alignment: Alignment.center,
-                child: Text(
-                  'Press Me',
-                  style: TextStyle(color: Colors.white),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  _bigger = !_bigger;
+                });
+              },
+              child: Container(
+                width: 100,
+                height: 50,
+                decoration: const BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: const Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Press Me',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             )
