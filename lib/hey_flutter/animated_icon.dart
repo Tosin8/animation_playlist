@@ -15,9 +15,12 @@ class _Animated_IconState extends State<Animated_Icon>
     // TODO: implement initState
     super.initState();
     _animationController = AnimationController(
-      duration: const Duration(seconds: 5),
+      duration: const Duration(milliseconds: 13000),
       vsync: this,
-    )..repeat();
+    )..forward().then((_) async {
+        await Future.delayed(const Duration(seconds: 1));
+        _animationController.reverse();
+      });
   }
 
   @override
@@ -34,6 +37,7 @@ class _Animated_IconState extends State<Animated_Icon>
         body: Center(
             child: AnimatedIcon(
           icon: AnimatedIcons.play_pause,
+          size: 160,
           progress: _animationController,
         )));
   }
