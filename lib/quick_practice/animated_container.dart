@@ -25,15 +25,15 @@ class _AnimatedImagesState extends State<AnimatedImages> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-                child: AnimatedContainer(
-              curve: Curves.bounceIn,
-              duration: const Duration(seconds: 100),
-              child: Image.asset(
-                'assets/images/star.png',
-                width: _bigger ? 100 : 300,
+              child: AnimatedContainer(
+                duration: const Duration(seconds: 100),
+                child: Image.asset(
+                  'assets/images/star.png',
+                  width: _bigger ? 100 : 300,
+                ),
               ),
-            )),
-            const SizedBox(height: 10),
+            ),
+            SizedBox(height: 10),
             GestureDetector(
               onTap: () {
                 setState(() {
