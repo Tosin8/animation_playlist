@@ -30,18 +30,36 @@ class _Animated_ContainerState extends State<Animated_Container> {
     });
   }
 
+  void _changeRadius() {
+    setState(() {
+      _borderRadius = BorderRadius.circular(random.nextInt(80).toDouble());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-        ),
-        body: Center(
-            child: AnimatedContainer(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+      ),
+      body: Center(
+        child: AnimatedContainer(
           duration: const Duration(seconds: 1),
           curve: Curves.fastOutSlowIn,
           width: boxWidth,
           height: boxHeight,
-        )));
+          decoration:
+              BoxDecoration(color: boxColor, borderRadius: _borderRadius),
+        ),
+      ),
+      bottomNavigationBar: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          IconButton(onPressed: _changeBoxColor, icon: Icon(Icons.palette)),
+          IconButton(onPressed: _changeRadius, icon: Icon(Icons.interests)),
+          IconButton(onPressed: _changeBoxSize, icon: Icon(Icons.aspect_ratio))
+        ],
+      ),
+    );
   }
 }
