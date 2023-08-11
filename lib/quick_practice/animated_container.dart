@@ -28,7 +28,15 @@ class _AnimatedImagesState extends State<AnimatedImages> {
               width: 100,
             )),
             Container(
-              decoration: BoxDecoration(),
+              width: 100,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text(
+                'Press Me',
+                style: TextStyle(color: Colors.white),
+              ),
             )
           ],
         ));
