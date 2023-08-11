@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class Animated_Container extends StatefulWidget {
@@ -8,10 +10,19 @@ class Animated_Container extends StatefulWidget {
 }
 
 class _Animated_ContainerState extends State<Animated_Container> {
+  final random = Random();
   double boxHeight = 100;
   double boxWidth = 100;
   Color boxColor = Colors.deepPurple;
   BorderRadius _borderRadius = BorderRadius.circular(8);
+
+  void _changeBoxSize() {
+    setState(() {
+      boxWidth = random.nextInt(400).toDouble();
+      boxHeight = random.nextInt(400).toDouble();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
