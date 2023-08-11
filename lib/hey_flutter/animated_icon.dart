@@ -17,7 +17,7 @@ class _Animated_IconState extends State<Animated_Icon>
     _animationController = AnimationController(
       duration: const Duration(seconds: 5),
       vsync: this,
-    );
+    )..repeat();
   }
 
   @override
@@ -33,7 +33,7 @@ class _Animated_IconState extends State<Animated_Icon>
         ),
         body: Center(
             child: AnimatedIcon(
-          icon: AnimatedIcons.home_menu,
+          icon: AnimatedIcons.play_pause,
           progress: _animationController,
         )));
   }
