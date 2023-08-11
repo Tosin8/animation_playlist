@@ -16,8 +16,21 @@ class _AnimatedImagesState extends State<AnimatedImages> {
             'Implicit Animation',
             style: TextStyle(color: Colors.white),
           ),
+          centerTitle: true,
           backgroundColor: Colors.blue,
         ),
-        body: Center(child: Image.asset('assets/images/star.png')));
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+                child: Image.asset(
+              'assets/images/star.png',
+              width: 100,
+            )),
+            Container(
+              decoration: BoxDecoration(),
+            )
+          ],
+        ));
   }
 }
