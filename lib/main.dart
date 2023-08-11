@@ -1,7 +1,6 @@
-import 'package:animation_playlist/hey_flutter/animated_container.dart';
-import 'package:animation_playlist/quick_practice/animated_container.dart';
-
 import 'package:flutter/material.dart';
+
+import 'hey_flutter/animated_icon.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Animated_Container(),
+      home: const Animated_Icon(),
     );
   }
 }
