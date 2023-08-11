@@ -12,7 +12,7 @@ class _AnimatedImagesState extends State<AnimatedImages> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Implicit Animation',
             style: TextStyle(color: Colors.white),
           ),
@@ -27,15 +27,19 @@ class _AnimatedImagesState extends State<AnimatedImages> {
               'assets/images/star.png',
               width: 100,
             )),
+            SizedBox(height: 10),
             Container(
               width: 100,
               height: 50,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.blue,
               ),
-              child: Text(
-                'Press Me',
-                style: TextStyle(color: Colors.white),
+              child: const Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Press Me',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             )
           ],
