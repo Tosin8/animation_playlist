@@ -1,8 +1,3 @@
-import 'package:animation_playlist/bottom_nav.dart';
-import 'package:animation_playlist/explicit_animation/bounce.dart';
-import 'package:animation_playlist/explicit_animation/galaxy.dart';
-import 'package:animation_playlist/explicit_animation/lineargradient.dart';
-import 'package:animation_playlist/implict_animation/checklist.dart';
 import 'package:animation_playlist/quick_practice/animated_container.dart';
 
 import 'package:flutter/material.dart';
