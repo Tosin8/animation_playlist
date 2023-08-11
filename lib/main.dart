@@ -1,3 +1,4 @@
+import 'package:animation_playlist/hey_flutter/animated_container.dart';
 import 'package:animation_playlist/quick_practice/animated_container.dart';
 
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const AnimatedImages(),
+      home: const Animated_Container(),
     );
   }
 }
