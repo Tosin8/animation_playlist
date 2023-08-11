@@ -23,6 +23,13 @@ class _Animated_ContainerState extends State<Animated_Container> {
     });
   }
 
+  void _changeBoxColor() {
+    setState(() {
+      boxColor = Color.fromRGBO(
+          random.nextInt(256), random.nextInt(256), random.nextInt(256), 1);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
