@@ -15,7 +15,7 @@ class _AnimatedImagesState extends State<AnimatedImages> {
     return Scaffold(
         appBar: AppBar(
           title: const Text(
-            'Implicit Animation',
+            ' Explicit Animation',
             style: TextStyle(color: Colors.white),
           ),
           centerTitle: true,
@@ -24,37 +24,21 @@ class _AnimatedImagesState extends State<AnimatedImages> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(
-              child: AnimatedContainer(
-                duration: const Duration(seconds: 100),
-                child: Image.asset(
-                  'assets/images/star.png',
-                  width: _bigger ? 100 : 300,
-                ),
-              ),
-            ),
-            SizedBox(height: 10),
-            GestureDetector(
-              onTap: () {
-                setState(() {
-                  _bigger = !_bigger;
-                });
-              },
-              child: Container(
-                width: 100,
-                height: 50,
-                decoration: const BoxDecoration(
-                  color: Colors.blue,
-                ),
-                child: const Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Press Me',
-                    style: TextStyle(color: Colors.white),
+            TweenAnimationBuilder(
+              duration: Duration(seconds: 100),
+              tween: Tween<double>(begin: 0, end: 5),
+              builder: (_, double angle, __) {
+                return Transform.rotate(
+                  angle: angle,
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/star.png',
+                      width: 100,
+                    ),
                   ),
-                ),
-              ),
-            )
+                );
+              },
+            ),
           ],
         ));
   }
