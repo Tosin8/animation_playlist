@@ -32,11 +32,8 @@ class _AnimatedContainerStarState extends State<AnimatedContainerStar>
         backgroundColor: Colors.blue,
       ),
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        ScaleTransition(
-          alignment: Alignment.center,
-          scale: _animationController,
-
-          //turns: _animationController,
+        RotationTransition(
+          turns: _animationController,
           child: Center(
             child: Image.asset(
               'assets/images/star.png',
