@@ -24,11 +24,15 @@ class _AnimatedImagesState extends State<AnimatedImages> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(
-                child: Image.asset(
-              'assets/images/star.png',
-              width: 100,
-            )),
+            AnimatedContainer(
+              duration: const Duration(seconds: 100),
+              curve: Curves.bounceIn,
+              child: Center(
+                  child: Image.asset(
+                'assets/images/star.png',
+                width: _bigger ? 100 : 300,
+              )),
+            ),
             SizedBox(height: 10),
             GestureDetector(
               onTap: () {
