@@ -1,53 +1,23 @@
 import 'package:flutter/material.dart';
 
-class AnimatedContainerStar extends StatefulWidget {
-  const AnimatedContainerStar({super.key});
+class AnimatedImages extends StatefulWidget {
+  const AnimatedImages({super.key});
 
   @override
-  State<AnimatedContainerStar> createState() => _AnimatedContainerStarState();
+  State<AnimatedImages> createState() => _AnimatedImagesState();
 }
 
-class _AnimatedContainerStarState extends State<AnimatedContainerStar>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _animationController;
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    _animationController = AnimationController(
-      duration: const Duration(seconds: 15),
-      vsync: this,
-    )..repeat();
-  }
-
+class _AnimatedImagesState extends State<AnimatedImages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Explicit Animation',
-          style: TextStyle(color: Colors.white),
-        ),
-        elevation: 3,
-        backgroundColor: Colors.blue,
-      ),
-      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        RotationTransition(
-          turns: _animationController,
-          child: Center(
-            child: Image.asset(
-              'assets/images/star.png',
-              width: 120,
-            ),
+        appBar: AppBar(
+          title: Text(
+            'Implicit Animation',
+            style: TextStyle(color: Colors.white),
           ),
+          backgroundColor: Colors.blue,
         ),
-      ]),
-    );
-  }
-
-  @override
-  void dispose() {
-    _animationController.dispose();
-    super.dispose();
+        body: Center(child: Image.asset('assets/images/star.png')));
   }
 }
