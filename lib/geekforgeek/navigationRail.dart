@@ -1,15 +1,29 @@
 import 'package:flutter/material.dart';
 
-class NavigationRail extends StatefulWidget {
-  const NavigationRail({super.key});
+class NavigationRailDemo extends StatefulWidget {
+  const NavigationRailDemo({super.key});
 
   @override
-  State<NavigationRail> createState() => _NavigationRailState();
+  State<NavigationRailDemo> createState() => _NavigationRailDemoState();
 }
 
-class _NavigationRailState extends State<NavigationRail> {
+class _NavigationRailDemoState extends State<NavigationRailDemo> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'NavigationRail',
+            style: TextStyle(color: Colors.white),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.blue,
+        ),
+        body: Row(
+          children: [
+            NavigationRail(
+                destinations: destinations, selectedIndex: selectedIndex)
+          ],
+        ));
   }
 }
