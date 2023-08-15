@@ -2,4 +2,9 @@
 It allows navigation bar at the left or right location of the screen. 
 
 Parameters: 
-1. backgroundColor: 
+1. backgroundColor: The color of the container which holds the navigation rail. 
+2. destinations: The destinations represented by items on the rails to be taken.
+3. elevation: The navigation rail's elevation
+4. extended: Boolean to set if rail is to be extended. 
+5. groupAlignment: The vertical alignment of the items of rails.
+6. 
