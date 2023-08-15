@@ -8,4 +8,15 @@ Parameters:
 4. extended: Boolean to set if rail is to be extended. 
 5. groupAlignment: The vertical alignment of the items of rails.
 6. indicatorColor: the color of indicated items. 
-7. labelType: 
+7. labelType: The styling of the text of items on rails.
+8. leading: The widget that appears before destinations.
+9. onDestinationSelected: Function to be called when any destination is selected.
+10. inExtendedWidth: The width to be extended after the rail layout on the screen.
+11. minWidth: The smallest possible width of rails regardless of destinations icon.
+12. selectedIconTheme: The style of icon selected.
+13. selectedIndex: The index of the item that is selected from the destinations array.
+14. selectedLabelTextStyle: The text style of icon label that is selected from destinations.
+15. trailing: The widget that is displayed below the destinations.
+16 unselectedIconTheme: The styling of unselected items among the destinations.
+17. unselectedLabelTextStyle: The text style of labels of destinations.
+18. useIndicator: Boolean when set to true creates a box behind a selected icon of destinations on rails.
