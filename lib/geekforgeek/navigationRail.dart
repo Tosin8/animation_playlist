@@ -8,6 +8,7 @@ class NavigationRailDemo extends StatefulWidget {
 }
 
 class _NavigationRailDemoState extends State<NavigationRailDemo> {
+  int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +23,27 @@ class _NavigationRailDemoState extends State<NavigationRailDemo> {
         body: Row(
           children: [
             NavigationRail(
-                destinations: destinations, selectedIndex: selectedIndex)
+                selectedIndex: _selectedIndex,
+                onDestinationSelected: (int index) {
+                  setState(() {
+                    _selectedIndex = index;
+                  });
+                },
+                destinations: const <NavigationRailDestination>[
+                  NavigationRailDestination(
+                    icon: Icon(Icons.favorite_border),
+                    label: Text('Wishlist'),
+                    selectedIcon: Icon(Icons.favorite_border),
+                  ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.shopping_cart),
+                    label: Text('Cart'),
+                    selectedIcon: Icon(Icons.favorite_border),
+                  ),
+                ],
+                selectedIconTheme: IconThemeData(color: Colors.white),
+                unselectedIconTheme: IconThemeData(color: Colors.black),
+                selectedLabelTextStyle: TextStyle(color: Colors.white))
           ],
         ));
   }
