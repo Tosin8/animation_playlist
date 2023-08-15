@@ -1,0 +1,5 @@
+// 1. Navigation Rail Parameters. 
+It allows navigation bar at the left or right location of the screen. 
+
+Parameters: 
+1. backgroundColor: 
