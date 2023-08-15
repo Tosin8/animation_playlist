@@ -7,4 +7,5 @@ Parameters:
 3. elevation: The navigation rail's elevation
 4. extended: Boolean to set if rail is to be extended. 
 5. groupAlignment: The vertical alignment of the items of rails.
-6. 
+6. indicatorColor: the color of indicated items. 
+7. labelType: 
