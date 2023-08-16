@@ -23,6 +23,7 @@ class _NavigationRailDemoState extends State<NavigationRailDemo> {
         body: Row(
           children: [
             NavigationRail(
+                backgroundColor: Colors.white,
                 selectedIndex: _selectedIndex,
                 onDestinationSelected: (int index) {
                   setState(() {
