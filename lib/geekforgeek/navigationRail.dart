@@ -40,6 +40,11 @@ class _NavigationRailDemoState extends State<NavigationRailDemo> {
                     label: Text('Cart'),
                     selectedIcon: Icon(Icons.favorite_border),
                   ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.shopping_cart),
+                    label: Text('favorite'),
+                    selectedIcon: Icon(Icons.favorite_border),
+                  ),
                 ],
                 selectedIconTheme: IconThemeData(color: Colors.white),
                 unselectedIconTheme: IconThemeData(color: Colors.black),
