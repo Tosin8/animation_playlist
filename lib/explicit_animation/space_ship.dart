@@ -8,7 +8,8 @@ class Space_Ship extends StatefulWidget {
 }
 
 class _Space_ShipState extends State<Space_Ship> {
-  final Image Galaxy = Image.asset('assets/images/galaxy.jpg');
+  final Image Galaxy =
+      Image.asset('assets/images/galaxy.jpg', fit: BoxFit.cover);
   final Image SpaceShip = Image.asset('assets/images/spaceship.png');
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class _Space_ShipState extends State<Space_Ship> {
       body: Stack(alignment: Alignment.center, children: [
         Container(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
+            height: 500,
             child: Galaxy),
         ClipPath(
           clipper: BeamClipper(),
