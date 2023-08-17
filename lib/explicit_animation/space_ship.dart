@@ -17,7 +17,7 @@ class _Space_ShipState extends State<Space_Ship> {
       body: Stack(alignment: Alignment.center, children: [
         Container(
             width: MediaQuery.of(context).size.width,
-            height: 500,
+            height: MediaQuery.of(context).size.height,
             child: Galaxy),
         ClipPath(
           clipper: BeamClipper(),
