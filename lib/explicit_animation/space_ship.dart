@@ -8,10 +8,15 @@ class Space_Ship extends StatefulWidget {
 }
 
 class _Space_ShipState extends State<Space_Ship> {
+  final Image Galaxy = Image.asset('assets/images/galaxy.jpg');
   final Image SpaceShip = Image.asset('assets/images/spaceship.png');
   @override
   Widget build(BuildContext context) {
     return Stack(alignment: Alignment.center, children: [
+      Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Galaxy),
       ClipPath(
         clipper: BeamClipper(),
         child: Container(
@@ -22,7 +27,7 @@ class _Space_ShipState extends State<Space_Ship> {
               Colors.transparent,
             ]))),
       ),
-      SpaceShip,
+      SpaceShip
     ]);
   }
 }
@@ -41,7 +46,5 @@ class BeamClipper extends CustomClipper<Path> {
   }
 
   @override
-  bool shouldReclip(CustomClipper oldClipper) {
-    false;
-  }
+  bool shouldReclip(CustomClipper oldClipper) => false;
 }
