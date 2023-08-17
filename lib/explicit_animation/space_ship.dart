@@ -8,16 +8,18 @@ class Space_Ship extends StatefulWidget {
 }
 
 class _Space_ShipState extends State<Space_Ship> {
-  final Image Galaxy = Image.asset('assets/images/galaxy.jpg');
   final Image SpaceShip = Image.asset('assets/images/spaceship.png');
   @override
   Widget build(BuildContext context) {
     return Stack(alignment: Alignment.center, children: [
-      Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          child: Galaxy),
       SpaceShip,
+      Container(
+          height: 1000,
+          decoration: BoxDecoration(
+              gradient: RadialGradient(colors: [
+            Colors.yellow,
+            Colors.transparent,
+          ])))
     ]);
   }
 }
