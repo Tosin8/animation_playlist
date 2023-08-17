@@ -12,8 +12,8 @@ class _Space_ShipState extends State<Space_Ship> {
   @override
   Widget build(BuildContext context) {
     return Stack(alignment: Alignment.center, children: [
-      SpaceShip,
       ClipPath(
+        clipper: BeamClipper(),
         child: Container(
             height: 1000,
             decoration: BoxDecoration(
@@ -21,7 +21,27 @@ class _Space_ShipState extends State<Space_Ship> {
               Colors.yellow,
               Colors.transparent,
             ]))),
-      )
+      ),
+      SpaceShip,
     ]);
+  }
+}
+
+class BeamClipper extends CustomClipper<Path> {
+  const BeamClipper();
+
+  @override
+  getClip(Size size) {
+    return Path()
+      ..lineTo(size.width / 2, size.height / 2)
+      ..lineTo(size.width, size.height)
+      ..lineTo(0, size.height)
+      ..lineTo(size.width / 2, size.height / 2)
+      ..close();
+  }
+
+  @override
+  bool shouldReclip(CustomClipper oldClipper) {
+    false;
   }
 }
