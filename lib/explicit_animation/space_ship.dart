@@ -13,13 +13,15 @@ class _Space_ShipState extends State<Space_Ship> {
   Widget build(BuildContext context) {
     return Stack(alignment: Alignment.center, children: [
       SpaceShip,
-      Container(
-          height: 1000,
-          decoration: BoxDecoration(
-              gradient: RadialGradient(colors: [
-            Colors.yellow,
-            Colors.transparent,
-          ])))
+      ClipPath(
+        child: Container(
+            height: 1000,
+            decoration: BoxDecoration(
+                gradient: RadialGradient(radius: 1.5, colors: [
+              Colors.yellow,
+              Colors.transparent,
+            ]))),
+      )
     ]);
   }
 }
