@@ -22,7 +22,8 @@ class _Rotating_GalaxyState extends State<Rotating_Galaxy>
       duration: const Duration(seconds: 5),
       vsync:
           this, // give reference to the object to notify our changes bringing it with the 'single ticker'
-    )..repeat(); // asking the controller to keep repeating the animation
+    )..repeat();
+    // asking the controller to keep repeating the animation
   }
 
   @override
