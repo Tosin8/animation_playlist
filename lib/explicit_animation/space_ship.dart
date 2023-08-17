@@ -11,26 +11,40 @@ class _Space_ShipState extends State<Space_Ship> {
   final Image Galaxy =
       Image.asset('assets/images/galaxy.jpg', fit: BoxFit.cover);
   final Image SpaceShip = Image.asset('assets/images/spaceship.png');
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(alignment: Alignment.center, children: [
-        Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            child: Galaxy),
-        ClipPath(
-          clipper: BeamClipper(),
-          child: Container(
-              height: 1000,
-              decoration: BoxDecoration(
-                  gradient: RadialGradient(radius: 1.5, colors: [
-                Colors.yellow,
-                Colors.transparent,
-              ]))),
-        ),
-        SpaceShip
-      ]),
+      body: SafeArea(
+        child: Stack(alignment: Alignment.center, children: [
+          Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              child: Galaxy),
+          ClipPath(
+            clipper: BeamClipper(),
+            child: Container(
+                height: 1000,
+                decoration: BoxDecoration(
+                    gradient: RadialGradient(radius: 1.5, colors: [
+                  Colors.yellow,
+                  Colors.transparent,
+                ]))),
+          ),
+          SpaceShip
+        ]),
+      ),
     );
   }
 }
