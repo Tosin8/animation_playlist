@@ -7,19 +7,26 @@ class Space_Ship extends StatefulWidget {
   State<Space_Ship> createState() => _Space_ShipState();
 }
 
-class _Space_ShipState extends State<Space_Ship> {
+class _Space_ShipState extends State<Space_Ship>
+    with SingleTickerProviderStateMixin {
   final Image Galaxy =
       Image.asset('assets/images/galaxy.jpg', fit: BoxFit.cover);
   final Image SpaceShip = Image.asset('assets/images/spaceship.png');
+
+  late AnimationController _animationController;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    _animationController =
+        AnimationController(duration: Duration(seconds: 5), vsync: this)
+          ..repeat();
   }
 
   @override
   void dispose() {
+    _animationController.dispose();
     super.dispose();
   }
 
@@ -32,16 +39,23 @@ class _Space_ShipState extends State<Space_Ship> {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               child: Galaxy),
-          ClipPath(
-            clipper: BeamClipper(),
-            child: Container(
-                height: 1000,
-                decoration: BoxDecoration(
-                    gradient: RadialGradient(radius: 1.5, colors: [
-                  Colors.yellow,
-                  Colors.transparent,
-                ]))),
-          ),
+          AnimatedBuilder(
+              animation: _animationController,
+              builder: (_, __) {
+                return ClipPath(
+                  clipper: BeamClipper(),
+                  child: Container(
+                      height: 1000,
+                      decoration: BoxDecoration(
+                          gradient: RadialGradient(radius: 1.5, colors: [
+                        Colors.yellow,
+                        Colors.transparent,
+                      ], stops: [
+                        0,
+                        _animationController.value
+                      ]))),
+                );
+              }),
           SpaceShip
         ]),
       ),
