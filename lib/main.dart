@@ -1,4 +1,5 @@
 import 'package:animation_playlist/explicit_animation/galaxy.dart';
+import 'package:animation_playlist/explicit_animation/space_ship.dart';
 import 'package:animation_playlist/geekforgeek/navigationRail.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Rotating_Galaxy(),
+      home: Space_Ship(),
     );
   }
 }
