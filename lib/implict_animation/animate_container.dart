@@ -10,6 +10,9 @@ class AnimatingContainer extends StatefulWidget {
 class _AnimatingContainerState extends State<AnimatingContainer> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+        body: Center(
+      child: FlutterLogo(size: 60),
+    ));
   }
 }
