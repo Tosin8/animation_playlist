@@ -1,6 +1,4 @@
-import 'package:animation_playlist/explicit_animation/galaxy.dart';
-import 'package:animation_playlist/explicit_animation/space_ship.dart';
-import 'package:animation_playlist/geekforgeek/navigationRail.dart';
+import 'package:animation_playlist/explicit_animation/using_listern.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Space_Ship(),
+      home: const TickerS(),
     );
   }
 }

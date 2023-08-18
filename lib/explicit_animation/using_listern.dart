@@ -34,7 +34,7 @@ class _TickerSState extends State<TickerS> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-      Text('$i m/s'),
+      child: Text('$i m/s'),
     ));
   }
 }
