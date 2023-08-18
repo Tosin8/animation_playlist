@@ -1,3 +1,4 @@
+import 'package:animation_playlist/animation_gallery/gravity.dart';
 import 'package:animation_playlist/animation_gallery/switch.dart';
 
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const SwitchAnimate(),
+      home: const Gravity(),
     );
   }
 }

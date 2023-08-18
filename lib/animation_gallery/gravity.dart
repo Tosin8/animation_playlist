@@ -8,8 +8,9 @@ class Gravity extends StatefulWidget {
 }
 
 class _GravityState extends State<Gravity> {
+  bool isTapped = false;
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(body: Center(child: Icon(Icons.arrow_downward)));
   }
 }
