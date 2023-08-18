@@ -8,6 +8,7 @@ class SwitchAnimate extends StatefulWidget {
 }
 
 class _SwitchAnimateState extends State<SwitchAnimate> {
+  bool isTapped = false;
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
