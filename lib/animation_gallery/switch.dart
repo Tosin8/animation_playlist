@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class SwitchAnimate extends StatefulWidget {
   const SwitchAnimate({super.key});
@@ -18,6 +19,7 @@ class _SwitchAnimateState extends State<SwitchAnimate> {
       highlightColor: Colors.transparent,
       onTap: () => setState(() {
         isTapped = !isTapped;
+        HapticFeedback.lightImpact();
       }),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 300),
