@@ -13,9 +13,16 @@ class _SwitchAnimateState extends State<SwitchAnimate> {
   Widget build(BuildContext context) {
     return const Scaffold(
         body: Center(
-      child: Text(
-        'OFF',
-        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 19),
+      child: InkWell(
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        onTap:() => setState(() {
+          isTapped = !isTapped;
+        });
+        child: Text(
+          'OFF',
+          style: TextStyle(fontWeight: FontWeight.w600, fontSize: 19),
+        ),
       ),
     ));
   }
