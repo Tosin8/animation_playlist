@@ -27,13 +27,13 @@ class _SwitchAnimateState extends State<SwitchAnimate> {
         height: isTapped ? 64 : 67,
         width: isTapped ? 190 : 200,
         decoration: BoxDecoration(
-            color: isTapped ? Color(0xffB23F3F) : Color(0xffFF4e4e),
-            borderRadius: BorderRadius.all(Radius.circular(20)),
+            color: isTapped ? const Color(0xffB23F3F) : const Color(0xffFF4e4e),
+            borderRadius: const BorderRadius.all(Radius.circular(20)),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(isTapped ? 0 : 0.3),
                 blurRadius: isTapped ? 0 : 10,
-                offset: Offset(0, 7),
+                offset: const Offset(0, 7),
               )
             ]),
         child: Center(
