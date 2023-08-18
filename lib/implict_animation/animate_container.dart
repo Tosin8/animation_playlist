@@ -21,18 +21,27 @@ class _AnimatingContainerState extends State<AnimatingContainer> {
               height: selected ? 70 : 100,
               color: selected ? Colors.blue : Colors.green,
               child: const FlutterLogo()),
-          SizedBox(height: 20),
-          Container(
-              height: 30,
-              width: 80,
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Text(
-                'Press Me',
-                style: TextStyle(color: Colors.white),
-              ))
+          const SizedBox(height: 20),
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                selected = !selected;
+              });
+            },
+            child: Container(
+                height: 30,
+                width: 80,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Center(
+                  child: Text(
+                    'Press Me',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                )),
+          )
         ],
       ),
     ));
