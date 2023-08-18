@@ -10,9 +10,12 @@ class SwitchAnimate extends StatefulWidget {
 class _SwitchAnimateState extends State<SwitchAnimate> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
         body: Center(
-      child: Text('OFF'),
+      child: Text(
+        'OFF',
+        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 19),
+      ),
     ));
   }
 }
