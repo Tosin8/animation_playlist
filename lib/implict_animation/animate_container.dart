@@ -16,9 +16,7 @@ class _AnimatingContainerState extends State<AnimatingContainer> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          AnimatedContainer(
-              duration: const Duration(seconds: 5),
-              curve: Curves.bounceIn,
+          Container(
               width: selected ? 80 : 120,
               height: selected ? 70 : 100,
               color: selected ? Colors.blue : Colors.green,
