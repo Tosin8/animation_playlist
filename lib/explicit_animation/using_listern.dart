@@ -28,6 +28,7 @@ class _TickerSState extends State<TickerS> with SingleTickerProviderStateMixin {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
+    _animationController.dispose();
   }
 
   @override
