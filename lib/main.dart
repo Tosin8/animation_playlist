@@ -1,5 +1,5 @@
-import 'package:animation_playlist/explicit_animation/using_listern.dart';
-import 'package:animation_playlist/implict_animation/animate_container.dart';
+import 'package:animation_playlist/animation_gallery/switch.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const AnimatingContainer(),
+      home: const SwitchAnimate(),
     );
   }
 }
