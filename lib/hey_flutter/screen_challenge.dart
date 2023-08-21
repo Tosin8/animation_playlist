@@ -32,10 +32,21 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
               top: 20,
               left: 350,
               child: PopupMenuButton(
+                  color: Colors.white,
                   itemBuilder: (BuildContext context) => [
                         PopupMenuItem(child: Text('View Profile')),
                         PopupMenuItem(child: Text('Add to friends')),
                       ])),
+          Row(
+            children: [
+              Image.asset(name),
+              Column(
+                children: [
+                  Text('TasteMe'),
+                ],
+              )
+            ],
+          )
         ])
       ]),
     );
