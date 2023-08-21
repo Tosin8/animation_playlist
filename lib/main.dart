@@ -1,5 +1,6 @@
 import 'package:animation_playlist/animation_gallery/gravity.dart';
 import 'package:animation_playlist/animation_gallery/switch.dart';
+import 'package:animation_playlist/hey_flutter/screen_challenge.dart';
 
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Gravity(),
+      home: const Screen_Challenge(),
     );
   }
 }
