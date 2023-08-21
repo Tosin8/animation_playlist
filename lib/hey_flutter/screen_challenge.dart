@@ -12,7 +12,7 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'TasteMe',
           style: TextStyle(
             fontWeight: FontWeight.bold,
@@ -20,8 +20,10 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
         ),
         centerTitle: true,
         backgroundColor: Colors.white24,
+        elevation: 3,
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
+      body: Stack(),
     );
   }
 }
