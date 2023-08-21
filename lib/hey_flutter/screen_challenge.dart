@@ -34,38 +34,54 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
               child: PopupMenuButton(
                   color: Colors.white,
                   itemBuilder: (BuildContext context) => [
-                        PopupMenuItem(child: Text('View Profile')),
-                        PopupMenuItem(child: Text('Add to friends')),
+                        PopupMenuItem(
+                            child: GestureDetector(
+                                onTap: () {
+                                  print('View Profile Pressed');
+                                },
+                                child: Text('View Profile'))),
+                        PopupMenuItem(
+                            child: GestureDetector(
+                                onTap: () {
+                                  print('Add to friends pressed');
+                                },
+                                child: Text('Add to friends'))),
                       ])),
-          Row(
-            children: [
-              Container(
-                  width: 80,
-                  height: 50,
-                  child: Image.asset('assets/images/food1.jpg')),
-              Column(
-                children: [
-                  Text(
-                    'TasteMe',
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                  Container(
-                      height: 30,
-                      width: 75,
-                      decoration: BoxDecoration(
+          Positioned(
+            top: 200,
+            child: Row(
+              children: [
+                Container(
+                    width: 100,
+                    height: 120,
+                    child: Image.asset('assets/images/food1.jpg')),
+                Column(
+                  children: [
+                    Text(
+                      'TasteMe',
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    Container(
+                        height: 30,
+                        width: 75,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.white, width: 2),
                           color: Colors.blue,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Center(
-                        child: Text(
-                          'Follow',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                          borderRadius: BorderRadius.circular(20),
                         ),
-                      )),
-                ],
-              )
-            ],
+                        child: Center(
+                          child: Text(
+                            'Follow',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        )),
+                  ],
+                )
+              ],
+            ),
           )
         ])
       ]),
