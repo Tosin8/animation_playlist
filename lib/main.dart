@@ -1,6 +1,6 @@
 import 'package:animation_playlist/animation_gallery/gravity.dart';
 import 'package:animation_playlist/animation_gallery/switch.dart';
-import 'package:animation_playlist/hey_flutter/screen_challenge.dart';
+import 'package:animation_playlist/hey_flutter/screen_challenge/screen_challenge.dart';
 
 import 'package:flutter/material.dart';
 
