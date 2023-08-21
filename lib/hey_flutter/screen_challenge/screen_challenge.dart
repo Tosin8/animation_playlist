@@ -14,8 +14,12 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: const [
-          IconButton(onPressed: null, icon: Icon(Icons.notifications_on))
+        actions: [
+          IconButton(
+              onPressed: () {
+                print('notification button bell was pressed');
+              },
+              icon: Icon(Icons.notifications_on))
         ],
         title: const Text(
           'TasteMe',
