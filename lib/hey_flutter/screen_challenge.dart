@@ -39,10 +39,30 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
                       ])),
           Row(
             children: [
-              Image.asset(name),
+              Container(
+                  width: 80,
+                  height: 50,
+                  child: Image.asset('assets/images/food1.jpg')),
               Column(
                 children: [
-                  Text('TasteMe'),
+                  Text(
+                    'TasteMe',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                  Container(
+                      height: 30,
+                      width: 75,
+                      decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Center(
+                        child: Text(
+                          'Follow',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                      )),
                 ],
               )
             ],
