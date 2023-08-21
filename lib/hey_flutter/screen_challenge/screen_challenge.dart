@@ -31,66 +31,7 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
             child: Image.asset('assets/images/food.jpg'),
           ),
           PopUpButton(),
-          Column(
-            children: [
-              SizedBox(height: 190),
-              Positioned(
-                //bottom: 0,
-                child: Row(
-                  children: [
-                    Container(
-                        width: 100,
-                        height: 120,
-                        decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.8),
-                                spreadRadius: 2,
-                              )
-                            ],
-                            border: Border.all(color: Colors.white, width: 2),
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                                fit: BoxFit.fill,
-                                image: AssetImage(
-                                  'assets/images/chef_profile.jpg',
-                                )))),
-                    Column(
-                      children: [
-                        const Text(
-                          'TasteMe',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            print('follow me button has been pressed');
-                          },
-                          child: Container(
-                              height: 40,
-                              width: 75,
-                              decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  'Follow',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              )),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ],
-          )
+          User_Info()
         ]),
         const SizedBox(height: 20),
         const IntrinsicHeight(
