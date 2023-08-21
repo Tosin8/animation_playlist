@@ -85,43 +85,47 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
           )
         ]),
         const SizedBox(height: 20),
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(
-              children: [
-                Text(
-                  '5',
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
+        const IntrinsicHeight(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                children: [
+                  Text(
+                    '5',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                Text('Followers',
-                    style:
-                        TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-              ],
-            ),
-            SizedBox(width: 60),
-            Text('|'),
-            SizedBox(width: 60),
-            Column(
-              children: [
-                Text(
-                  '38',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  'Posts',
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-                ),
-              ],
-            )
-          ],
+                  Text('Followers',
+                      style:
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                ],
+              ),
+              SizedBox(width: 60),
+              VerticalDivider(color: Colors.black),
+              SizedBox(width: 60),
+              Column(
+                children: [
+                  Text(
+                    '38',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Posts',
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         const Text(
-            'Showcasing the finest food,drinks and travel. Recipes,healthy, tips , food photography.'),
+          'Showcasing the finest food,drinks and travel. Recipes,healthy, tips , food photography.',
+          textAlign: TextAlign.center,
+        ),
       ]),
     );
   }
