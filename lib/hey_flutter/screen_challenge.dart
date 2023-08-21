@@ -39,13 +39,13 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
                                 onTap: () {
                                   print('View Profile Pressed');
                                 },
-                                child: Text('View Profile'))),
+                                child: const Text('View Profile'))),
                         PopupMenuItem(
                             child: GestureDetector(
                                 onTap: () {
                                   print('Add to friends pressed');
                                 },
-                                child: Text('Add to friends'))),
+                                child: const Text('Add to friends'))),
                       ])),
           Positioned(
             top: 200,
@@ -57,7 +57,7 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
                     child: Image.asset('assets/images/food1.jpg')),
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       'TasteMe',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold),
@@ -70,7 +70,7 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'Follow',
                             style: TextStyle(
@@ -83,7 +83,45 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
               ],
             ),
           )
-        ])
+        ]),
+        const SizedBox(height: 20),
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
+              children: [
+                Text(
+                  '5',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text('Followers',
+                    style:
+                        TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+              ],
+            ),
+            SizedBox(width: 60),
+            Text('|'),
+            SizedBox(width: 60),
+            Column(
+              children: [
+                Text(
+                  '38',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'Posts',
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                ),
+              ],
+            )
+          ],
+        ),
+        SizedBox(height: 20),
+        const Text(
+            'Showcasing the finest food,drinks and travel. Recipes,healthy, tips , food photography.'),
       ]),
     );
   }
