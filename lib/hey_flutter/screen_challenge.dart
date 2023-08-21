@@ -23,11 +23,19 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
         elevation: 3,
       ),
       drawer: const Drawer(),
-      body: Row(children: [
+      body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
         Stack(children: [
           Container(
-            child: Image.asset(name),
+            child: Image.asset('assets/images/food.jpg'),
           ),
+          Positioned(
+              top: 20,
+              left: 350,
+              child: PopupMenuButton(
+                  itemBuilder: (BuildContext context) => [
+                        PopupMenuItem(child: Text('View Profile')),
+                        PopupMenuItem(child: Text('Add to friends')),
+                      ])),
         ])
       ]),
     );
