@@ -14,6 +14,9 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: const [
+          IconButton(onPressed: null, icon: Icon(Icons.notifications_on))
+        ],
         title: const Text(
           'TasteMe',
           style: TextStyle(
@@ -26,7 +29,8 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
       ),
       drawer: const Drawer(),
       body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-        Stack(children: [HeaderImage(), PopUpButton(), User_Info()]),
+        Stack(
+            children: [HeaderImage(), const PopUpButton(), const User_Info()]),
         const SizedBox(height: 20),
         const IntrinsicHeight(
           child: Row(
