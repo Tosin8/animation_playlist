@@ -72,6 +72,4 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
       ]),
     );
   }
-
- 
 }
