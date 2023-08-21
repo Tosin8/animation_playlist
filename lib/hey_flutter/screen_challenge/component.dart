@@ -37,32 +37,36 @@ class User_Info extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 190),
+        const SizedBox(height: 190),
         Positioned(
           //bottom: 0,
           child: Row(
             children: [
+              SizedBox(width: 20),
               Container(
                   width: 100,
                   height: 120,
                   decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.8),
+                          color: Colors.black.withOpacity(0.5),
                           spreadRadius: 2,
+                          blurRadius: 6,
+                          offset: Offset.zero,
                         )
                       ],
                       border: Border.all(color: Colors.white, width: 2),
                       shape: BoxShape.circle,
-                      image: DecorationImage(
+                      image: const DecorationImage(
                           fit: BoxFit.fill,
                           image: AssetImage(
                             'assets/images/chef_profile.jpg',
                           )))),
+              const SizedBox(width: 10),
               Column(
                 children: [
                   const Text(
-                    'TasteMe',
+                    'Chef Ma Chi',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
@@ -74,10 +78,16 @@ class User_Info extends StatelessWidget {
                         height: 40,
                         width: 75,
                         decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white, width: 2),
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
+                            border: Border.all(color: Colors.white, width: 2),
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.3),
+                                spreadRadius: 1,
+                                blurRadius: 4,
+                              )
+                            ]),
                         child: const Center(
                           child: Text(
                             'Follow',
@@ -95,4 +105,14 @@ class User_Info extends StatelessWidget {
       ],
     );
   }
+}
+
+Container HeaderImage() {
+  return Container(
+    child: Image.asset(
+      'assets/images/food.jpg',
+      color: Colors.black,
+      colorBlendMode: BlendMode.difference,
+    ),
+  );
 }

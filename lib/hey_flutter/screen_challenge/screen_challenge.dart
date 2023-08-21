@@ -26,13 +26,7 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
       ),
       drawer: const Drawer(),
       body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-        Stack(children: [
-          Container(
-            child: Image.asset('assets/images/food.jpg'),
-          ),
-          PopUpButton(),
-          User_Info()
-        ]),
+        Stack(children: [HeaderImage(), PopUpButton(), User_Info()]),
         const SizedBox(height: 20),
         const IntrinsicHeight(
           child: Row(
@@ -78,4 +72,6 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
       ]),
     );
   }
+
+ 
 }
