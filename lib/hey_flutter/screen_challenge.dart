@@ -29,8 +29,7 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
             child: Image.asset('assets/images/food.jpg'),
           ),
           Positioned(
-              top: 20,
-              left: 350,
+              right: 0,
               child: PopupMenuButton(
                   color: Colors.white,
                   itemBuilder: (BuildContext context) => [
@@ -48,7 +47,7 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
                                 child: const Text('Add to friends'))),
                       ])),
           Positioned(
-            top: 200,
+            bottom: 0,
             child: Row(
               children: [
                 Container(
