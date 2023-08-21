@@ -53,7 +53,14 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
                 Container(
                     width: 100,
                     height: 120,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.8),
+                            spreadRadius: 2,
+                          )
+                        ],
+                        border: Border.all(color: Colors.white, width: 2),
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             fit: BoxFit.fill,
@@ -67,22 +74,27 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
-                    Container(
-                        height: 30,
-                        width: 75,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white, width: 2),
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            'Follow',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                    GestureDetector(
+                      onTap: () {
+                        print('follow me button has been pressed');
+                      },
+                      child: Container(
+                          height: 30,
+                          width: 75,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 2),
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(20),
                           ),
-                        )),
+                          child: const Center(
+                            child: Text(
+                              'Follow',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                    ),
                   ],
                 )
               ],
