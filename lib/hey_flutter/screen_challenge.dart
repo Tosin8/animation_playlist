@@ -23,7 +23,13 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
         elevation: 3,
       ),
       drawer: const Drawer(),
-      body: Stack(),
+      body: Row(children: [
+        Stack(children: [
+          Container(
+            child: Image.asset(name),
+          ),
+        ])
+      ]),
     );
   }
 }
