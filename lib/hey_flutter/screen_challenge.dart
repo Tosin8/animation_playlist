@@ -53,7 +53,13 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
                 Container(
                     width: 100,
                     height: 120,
-                    child: Image.asset('assets/images/food1.jpg')),
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: AssetImage(
+                              'assets/images/chef_profile.jpg',
+                            )))),
                 Column(
                   children: [
                     const Text(
