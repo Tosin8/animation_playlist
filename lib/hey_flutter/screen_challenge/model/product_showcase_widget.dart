@@ -9,7 +9,23 @@ class ShowCaseWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [Image.asset(showcase.image, fit: BoxFit.cover), buildInfo()],
+      children: [
+        Stack(children: [
+          ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image.asset(showcase.image, fit: BoxFit.cover)),
+          Material(
+            color: Colors.white,
+            shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(8))),
+            child: Icon(
+              Icons.image,
+              color: Colors.black.withOpacity(0.8),
+            ),
+          )
+        ]),
+        buildInfo()
+      ],
     );
   }
 
@@ -19,15 +35,15 @@ class ShowCaseWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 4),
+          //const SizedBox(height: 2),
           Text(
             showcase.title,
             style: const TextStyle(fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 4),
+          //  const SizedBox(height: 2),
           Text(
             showcase.owner,
-            style: TextStyle(fontWeight: FontWeight.w400),
+            style: const TextStyle(fontWeight: FontWeight.w400),
           )
         ],
       ),
