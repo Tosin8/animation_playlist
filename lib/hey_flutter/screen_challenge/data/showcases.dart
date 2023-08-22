@@ -15,10 +15,16 @@ const List<Showcase> showcases = [
       owner: 'tasteme'),
   Showcase(
       image: 'assets/images/pizza.jpg',
-      title: 'Leto Caffe, London, United Kingdom',
+      title: 'Minimal Pizza',
       owner: 'tasteme'),
   Showcase(
       image: 'assets/images/pancake.jpg',
-      title: 'Leto Caffe, London, United Kingdom',
+      title: 'Dusty Pancakes',
+      owner: 'tasteme'),
+  Showcase(
+      image: 'assets/images/wine.jpg', title: 'Leto Wines', owner: 'tasteme'),
+  Showcase(
+      image: 'assets/images/spaghetti.jpg',
+      title: 'Leto Spaghetti',
       owner: 'tasteme'),
 ];
