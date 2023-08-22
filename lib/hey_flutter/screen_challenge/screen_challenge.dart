@@ -78,6 +78,7 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
           textAlign: TextAlign.center,
         ),
       ]),
+      bottomNavigationBar: TabBar(tabs: []),
     );
   }
 }
