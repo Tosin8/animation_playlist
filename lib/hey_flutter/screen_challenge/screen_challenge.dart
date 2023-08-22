@@ -57,9 +57,11 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
       ),
       drawer: const Drawer(),
       body: IndexedStack(
+        index: currentIndex,
         children: screens,
       ),
 
+// reason for indexstack so that during navigation, set managment can be maintainted.
       // screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,

@@ -55,6 +55,8 @@ class _UserState extends State<Explore> {
         'Showcasing the finest food,drinks and travel. Recipes,healthy, tips , food photography.',
         textAlign: TextAlign.center,
       ),
+      SizedBox(height: 20),
+      const Divider(),
     ]);
   }
 }
