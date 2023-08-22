@@ -44,24 +44,25 @@ class User_Info extends StatelessWidget {
             children: [
               SizedBox(width: 20),
               Container(
-                  width: 100,
-                  height: 120,
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 6,
-                          offset: Offset.zero,
-                        )
-                      ],
-                      border: Border.all(color: Colors.white, width: 2),
-                      shape: BoxShape.circle,
-                      image: const DecorationImage(
-                          fit: BoxFit.fill,
-                          image: AssetImage(
-                            'assets/images/chef_profile.jpg',
-                          )))),
+                width: 100,
+                height: 120,
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.5),
+                        spreadRadius: 2,
+                        blurRadius: 6,
+                        offset: Offset.zero,
+                      )
+                    ],
+                    border: Border.all(color: Colors.white, width: 2),
+                    shape: BoxShape.circle,
+                    image: const DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage(
+                          'assets/images/chef_profile.jpg',
+                        ))),
+              ),
               const SizedBox(width: 10),
               Column(
                 children: [
@@ -109,10 +110,18 @@ class User_Info extends StatelessWidget {
 
 Container HeaderImage() {
   return Container(
+    decoration: BoxDecoration(
+        gradient: LinearGradient(begin: Alignment.bottomRight, stops: const [
+      0.2,
+      09
+    ], colors: [
+      Colors.black.withOpacity(.6),
+      Colors.black.withOpacity(.1),
+    ])),
     child: Image.asset(
       'assets/images/food.jpg',
-      color: Colors.black,
-      colorBlendMode: BlendMode.difference,
+      // color: Colors.black,
+      // colorBlendMode: BlendMode.difference,
     ),
   );
 }

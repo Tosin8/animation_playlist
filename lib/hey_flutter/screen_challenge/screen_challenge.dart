@@ -1,6 +1,11 @@
+import 'package:animation_playlist/hey_flutter/screen_challenge/pages/explore.dart';
+import 'package:animation_playlist/hey_flutter/screen_challenge/pages/user.dart';
 import 'package:flutter/material.dart';
 
+// ignore: unused_import
 import 'component.dart';
+import 'pages/chat.dart';
+import 'pages/homepage.dart';
 
 class Screen_Challenge extends StatefulWidget {
   const Screen_Challenge({super.key});
@@ -11,6 +16,14 @@ class Screen_Challenge extends StatefulWidget {
 
 class _Screen_ChallengeState extends State<Screen_Challenge> {
   int currentIndex = 0;
+  bool favoriteTapped = false;
+
+  final screens = [
+    const HomePage(),
+    const Explore(),
+    const ChatPage(),
+    const UserPage(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,10 +35,15 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
               },
               icon: const Icon(Icons.notifications_on)),
           IconButton(
-              onPressed: () {
-                print('Favorite button pressed');
-              },
-              icon: const Icon(Icons.favorite_border_outlined)),
+            onPressed: () {
+              setState(() {
+                favoriteTapped = !favoriteTapped;
+              });
+            },
+            icon: favoriteTapped
+                ? const Icon(Icons.favorite_border_outlined)
+                : const Icon(Icons.favorite),
+          ),
         ],
         title: const Text(
           'TasteMe',
@@ -38,54 +56,21 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
         elevation: 3,
       ),
       drawer: const Drawer(),
-      body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-        Stack(
-            children: [HeaderImage(), const PopUpButton(), const User_Info()]),
-        const SizedBox(height: 20),
-        const IntrinsicHeight(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Column(
-                children: [
-                  Text(
-                    '5',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text('Followers',
-                      style:
-                          TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                ],
-              ),
-              SizedBox(width: 60),
-              VerticalDivider(color: Colors.black),
-              SizedBox(width: 60),
-              Column(
-                children: [
-                  Text(
-                    '38',
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    'Posts',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-                  ),
-                ],
-              )
-            ],
-          ),
-        ),
-        const SizedBox(height: 20),
-        const Text(
-          'Showcasing the finest food,drinks and travel. Recipes,healthy, tips , food photography.',
-          textAlign: TextAlign.center,
-        ),
-      ]),
+      body: IndexedStack(
+        children: screens,
+      ),
+
+      // screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white70,
+        backgroundColor: Colors.blue,
         currentIndex: currentIndex,
+        //  selectedFontSize: 25,
+        showUnselectedLabels: false,
+        // showSelectedLabels: false,
+        onTap: (index) => setState(() => currentIndex = index),
         elevation: 3,
         //iconSize: 30,
         items: const [
@@ -102,11 +87,10 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
             label: 'Cart',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.verified),
+            icon: Icon(Icons.person),
             label: 'Profile',
           ),
         ],
-        type: BottomNavigationBarType.fixed,
       ),
     );
   }
