@@ -24,6 +24,11 @@ class ShowCaseWidget extends StatelessWidget {
             showcase.title,
             style: const TextStyle(fontWeight: FontWeight.bold),
           ),
+          SizedBox(height: 4),
+          Text(
+            showcase.owner,
+            style: TextStyle(fontWeight: FontWeight.w400),
+          )
         ],
       ),
     );
