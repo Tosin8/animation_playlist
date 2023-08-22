@@ -10,6 +10,7 @@ class Screen_Challenge extends StatefulWidget {
 }
 
 class _Screen_ChallengeState extends State<Screen_Challenge> {
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,6 +85,7 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
         ),
       ]),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentIndex,
         elevation: 3,
         //iconSize: 30,
         items: const [
