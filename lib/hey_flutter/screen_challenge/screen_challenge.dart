@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'component.dart';
+import 'tabs.dart';
 
 class Screen_Challenge extends StatefulWidget {
   const Screen_Challenge({super.key});
@@ -19,7 +20,7 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
               onPressed: () {
                 print('notification button bell was pressed');
               },
-              icon: Icon(Icons.notifications_on))
+              icon: const Icon(Icons.notifications_on))
         ],
         title: const Text(
           'TasteMe',
@@ -78,7 +79,7 @@ class _Screen_ChallengeState extends State<Screen_Challenge> {
           textAlign: TextAlign.center,
         ),
       ]),
-      bottomNavigationBar: TabBar(tabs: []),
+      bottomNavigationBar: BottomNavigationBar(items: []),
     );
   }
 }
