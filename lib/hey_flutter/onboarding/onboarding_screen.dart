@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import 'onboarding_home.dart';
+
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
 
@@ -10,6 +12,7 @@ class OnBoardingPage extends StatefulWidget {
 
 class _OnBoardingPageState extends State<OnBoardingPage> {
   final controller = PageController();
+  bool isLastPage = false;
   @override
   void dispose() {
     controller.dispose();
@@ -25,6 +28,11 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           padding: const EdgeInsets.only(bottom: 80),
           child: PageView(
             controller: controller,
+            onPageChanged: (index) {
+              setState(() {
+                isLastPage = index == 2;
+              });
+            },
             children: [
               Container(
                   color: Colors.red,
@@ -48,41 +56,58 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             ],
           ),
         ),
-        bottomSheet: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          height: 80,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              TextButton(
-                child: Text('SKIP'),
-                onPressed: () => controller.jumpToPage(2),
-              ),
-              Center(
-                  child: SmoothPageIndicator(
-                controller: controller,
-                count: 3,
-                effect: WormEffect(
-                  spacing: 16,
-                  dotColor: Colors.black26,
-                  activeDotColor: Colors.teal.shade700,
+        bottomSheet: isLastPage
+            ? TextButton(
+                style: TextButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(1),
+                    ),
+                    primary: Colors.white,
+                    backgroundColor: Colors.teal.shade700,
+                    minimumSize: const Size.fromHeight(80)),
+                onPressed: () async {
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => OnboardHome()));
+                },
+                child: const Text(
+                  'Get Started',
+                  style: TextStyle(fontSize: 24),
+                ))
+            : Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                height: 80,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextButton(
+                      child: Text('SKIP'),
+                      onPressed: () => controller.jumpToPage(2),
+                    ),
+                    Center(
+                        child: SmoothPageIndicator(
+                      controller: controller,
+                      count: 3,
+                      effect: WormEffect(
+                        spacing: 16,
+                        dotColor: Colors.black26,
+                        activeDotColor: Colors.teal.shade700,
+                      ),
+                      onDotClicked: (index) => controller.animateToPage(index,
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.easeIn),
+                    )),
+                    TextButton(
+                        onPressed: () {
+                          controller.nextPage(
+                              duration: const Duration(milliseconds: 500),
+                              curve: Curves.easeInOut);
+                        },
+                        child: Text(
+                          'NEXT',
+                        ))
+                  ],
                 ),
-                onDotClicked: (index) => controller.animateToPage(index,
-                    duration: const Duration(milliseconds: 500),
-                    curve: Curves.easeIn),
-              )),
-              TextButton(
-                  onPressed: () {
-                    controller.nextPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeInOut);
-                  },
-                  child: Text(
-                    'NEXT',
-                  ))
-            ],
-          ),
-        ),
+              ),
       ),
     );
   }
