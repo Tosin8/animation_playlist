@@ -41,6 +41,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         bottomSheet: Container(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           height: 80,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TextButton(onPressed: () {}, child: Text('SKIP')),
+              TextButton(onPressed: () {}, child: Text('NEXT'))
+            ],
+          ),
         ),
       ),
     );
