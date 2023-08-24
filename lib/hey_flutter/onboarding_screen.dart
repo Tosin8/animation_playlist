@@ -38,6 +38,10 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             ],
           ),
         ),
+        bottomSheet: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          height: 80,
+        ),
       ),
     );
   }
