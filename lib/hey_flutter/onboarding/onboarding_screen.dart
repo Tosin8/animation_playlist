@@ -67,8 +67,19 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   dotColor: Colors.black26,
                   activeDotColor: Colors.teal.shade700,
                 ),
+                onDotClicked: (index) => controller.animateToPage(index,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeIn),
               )),
-              TextButton(onPressed: () {}, child: Text('NEXT'))
+              TextButton(
+                  onPressed: () {
+                    controller.nextPage(
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.easeInOut);
+                  },
+                  child: Text(
+                    'NEXT',
+                  ))
             ],
           ),
         ),
