@@ -14,10 +14,13 @@ class _OnboardHomeState extends State<OnboardHome> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.black,
-        title: Text(
+        title: const Text(
           'Onboard Home',
           style: TextStyle(color: Colors.white),
         ),
+        actions: [
+          IconButton(onPressed: () async {}, icon: const Icon(Icons.logout))
+        ],
       ),
     );
   }

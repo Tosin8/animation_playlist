@@ -19,9 +19,12 @@ Future main() async {
 }
 
 class MyApp extends StatelessWidget {
-  // final bool showHome;
+  final bool showHome;
 
-  const MyApp({super.key, required bool showHome});
+  const MyApp({
+    super.key,
+    required this.showHome,
+  });
 
   // This widget is the root of your application.
   @override
@@ -33,7 +36,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: showHome ? OnboardHome() : OnBoardingPage(),
+      home: showHome ? const OnboardHome() : const OnBoardingPage(),
     );
   }
 }
