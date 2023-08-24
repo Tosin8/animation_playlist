@@ -1,3 +1,4 @@
+import 'package:animation_playlist/hey_flutter/onboarding/onboarding_home.dart';
 import 'package:animation_playlist/hey_flutter/onboarding/onboarding_screen.dart';
 import 'package:animation_playlist/hey_flutter/screen_challenge/screen_challenge.dart';
 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const OnBoardingPage(),
+      home: showHome ? OnboardHome() : OnBoardingPage(),
     );
   }
 }
