@@ -14,11 +14,13 @@ Future main() async {
   final prefs = await SharedPreferences.getInstance();
   final showHome = prefs.getBool('showHome') ?? false;
 
-  runApp(MyApp());
+  runApp(MyApp(showHome: showHome));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  // final bool showHome;
+
+  const MyApp({super.key, required bool showHome});
 
   // This widget is the root of your application.
   @override
