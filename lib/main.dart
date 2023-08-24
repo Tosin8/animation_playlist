@@ -2,9 +2,19 @@ import 'package:animation_playlist/hey_flutter/onboarding/onboarding_screen.dart
 import 'package:animation_playlist/hey_flutter/screen_challenge/screen_challenge.dart';
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(const MyApp());
+// void main() {
+//   runApp(const MyApp());
+// }
+
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final prefs = await SharedPreferences.getInstance();
+  final showHome = prefs.getBool('showHome') ?? false;
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

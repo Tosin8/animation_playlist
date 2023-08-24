@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'onboarding_home.dart';
@@ -66,8 +67,12 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     backgroundColor: Colors.teal.shade700,
                     minimumSize: const Size.fromHeight(80)),
                 onPressed: () async {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => OnboardHome()));
+                  // navigating directly to the home page, after user first attempts to skip the onboarding page.
+                  final prefs = await SharedPreferences.getInstance();
+                  prefs.setBool('showHome', true);
+                  // ignore: use_build_context_synchronously
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const OnboardHome()));
                 },
                 child: const Text(
                   'Get Started',
@@ -80,7 +85,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     TextButton(
-                      child: Text('SKIP'),
+                      child: const Text('SKIP'),
                       onPressed: () => controller.jumpToPage(2),
                     ),
                     Center(
@@ -102,7 +107,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                               duration: const Duration(milliseconds: 500),
                               curve: Curves.easeInOut);
                         },
-                        child: Text(
+                        child: const Text(
                           'NEXT',
                         ))
                   ],
