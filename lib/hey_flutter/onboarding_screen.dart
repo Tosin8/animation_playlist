@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
@@ -53,7 +54,20 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              TextButton(onPressed: () {}, child: Text('SKIP')),
+              TextButton(
+                child: Text('SKIP'),
+                onPressed: () => controller.jumpToPage(2),
+              ),
+              Center(
+                  child: SmoothPageIndicator(
+                controller: controller,
+                count: 3,
+                effect: WormEffect(
+                  spacing: 16,
+                  dotColor: Colors.black26,
+                  activeDotColor: Colors.teal.shade700,
+                ),
+              )),
               TextButton(onPressed: () {}, child: Text('NEXT'))
             ],
           ),
