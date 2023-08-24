@@ -15,6 +15,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         body: Container(
           padding: const EdgeInsets.only(bottom: 80),
           child: PageView(
+            controller: controller,
             children: [
               Container(
                   color: Colors.red,
