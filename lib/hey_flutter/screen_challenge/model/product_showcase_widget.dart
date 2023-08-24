@@ -18,7 +18,7 @@ class ShowCaseWidget extends StatelessWidget {
             color: Colors.white,
             shape: const RoundedRectangleBorder(
                 borderRadius:
-                    BorderRadius.only(bottomRight:g Radius.circular(8))),
+                    BorderRadius.only(bottomRight: Radius.circular(8))),
             child: Icon(
               Icons.image,
               color: Colors.black.withOpacity(0.8),
