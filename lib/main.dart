@@ -1,3 +1,4 @@
+import 'package:animation_playlist/hey_flutter/onboarding_screen.dart';
 import 'package:animation_playlist/hey_flutter/screen_challenge/screen_challenge.dart';
 
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Screen_Challenge(),
+      home: const OnBoardingPage(),
     );
   }
 }
