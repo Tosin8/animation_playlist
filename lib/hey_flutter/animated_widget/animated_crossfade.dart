@@ -8,7 +8,7 @@ class widget3 extends StatefulWidget {
 }
 
 class _widget3State extends State<widget3> {
-  bool _bool = true;
+  bool _bool = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +21,16 @@ class _widget3State extends State<widget3> {
             const SizedBox(
               width: double.infinity,
             ),
+            AnimatedCrossFade(
+                firstChild: _firstChild,
+                secondChild: Image.asset(
+                  'assets/images/pancake.jpg',
+                  width: double.infinity,
+                ),
+                crossFadeState: _bool
+                    ? CrossFadeState.showFirst
+                    : CrossFadeState.showSecond,
+                duration: Duration(seconds: 5)),
             TextButton(
                 onPressed: () {
                   setState(() {
@@ -31,16 +41,6 @@ class _widget3State extends State<widget3> {
                   'Switch',
                   style: TextStyle(color: Colors.blue),
                 )),
-            AnimatedCrossFade(
-                firstChild: _firstChild,
-                secondChild: Image.asset(
-                  'assets/images/pancake.jpg',
-                  width: double.infinity,
-                ),
-                crossFadeState: _bool
-                    ? CrossFadeState.showFirst
-                    : CrossFadeState.showSecond,
-                duration: Duration(seconds: 5))
           ],
         ));
   }
