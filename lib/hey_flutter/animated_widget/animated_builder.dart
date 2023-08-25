@@ -7,17 +7,19 @@ class widget2 extends StatefulWidget {
   State<widget2> createState() => _widget2State();
 }
 
-class _widget2State extends State<widget2> {
+class _widget2State extends State<widget2> with TickerProviderStateMixin {
+  late final AnimationController _controller =
+      AnimationController(vsync: this, duration: const Duration(seconds: 3));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Animated Builder',
             style: TextStyle(color: Colors.white),
           ),
           backgroundColor: Colors.black),
-      body: Text(''),
+      body: const Text(''),
     );
   }
 }
