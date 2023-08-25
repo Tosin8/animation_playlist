@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
 class widget2 extends StatefulWidget {
@@ -28,7 +30,18 @@ class _widget2State extends State<widget2> with TickerProviderStateMixin {
             style: TextStyle(color: Colors.white),
           ),
           backgroundColor: Colors.black),
-      body: const Text(''),
+      body: Center(
+          child: AnimatedBuilder(
+              animation: _controller,
+              child: const FlutterLogo(
+                size: 100,
+              ),
+              builder: (BuildContext context, child) {
+                return Transform.rotate(
+                  angle: _controller.value * 2.0 * math.pi,
+                  child: child,
+                );
+              })),
     );
   }
 }
