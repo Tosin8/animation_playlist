@@ -8,6 +8,7 @@ class widget7 extends StatefulWidget {
 }
 
 class _widget7State extends State<widget7> {
+  int _count = 0; 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +23,15 @@ class _widget7State extends State<widget7> {
         ),
         body: Center(
           child: Column(
-            children: [AnimatedSwitcher(duration: Duration(milliseconds: 500))],
+            children: [
+              AnimatedSwitcher(
+                duration: Duration(milliseconds: 500), 
+                child: Text(
+                  '$_count', 
+                style: const TextStyle(
+                  fontSize: 40), 
+                  key: ValueKey(_count),
+                ),),)],
           ),
         ));
   }
