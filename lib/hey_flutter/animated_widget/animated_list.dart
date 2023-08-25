@@ -8,6 +8,8 @@ class widget5 extends StatefulWidget {
 }
 
 class _widget5State extends State<widget5> {
+  final _items = [];
+  final GlobalKey<AnimatedList> _key = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
