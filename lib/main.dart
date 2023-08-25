@@ -12,6 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'hey_flutter/animated_widget/animated_align.dart';
 import 'hey_flutter/animated_widget/animated_list.dart';
 import 'hey_flutter/animated_widget/animated_rotation.dart';
+import 'hey_flutter/animated_widget/animated_switcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -61,7 +62,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Widget6(),
+      home: widget7(),
     );
   }
 }
