@@ -8,6 +8,7 @@ class widget1 extends StatefulWidget {
 }
 
 class _widget1State extends State<widget1> {
+  bool press = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,14 +22,39 @@ class _widget1State extends State<widget1> {
           backgroundColor: Colors.blue,
         ),
         body: Center(
-            child: Container(
-          height: 300,
-          width: double.infinity,
-          color: Colors.greenAccent,
-          child: AnimatedAlign(
-              duration: Duration(seconds: 2),
-              alignment: Alignment.bottomLeft,
-              child: const FlutterLogo(size: 50.0)),
+            child: Column(
+          children: [
+            Container(
+              height: 300,
+              width: double.infinity,
+              color: Colors.greenAccent,
+              child: AnimatedAlign(
+                  duration: Duration(seconds: 2),
+                  curve: Curves.bounceIn,
+                  alignment: press ? Alignment.bottomLeft : Alignment.topRight,
+                  child: const FlutterLogo(size: 50.0)),
+            ),
+            SizedBox(height: 20),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  press = !press;
+                });
+              },
+              child: Container(
+                height: 50,
+                width: 300,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.blue),
+                child: Center(
+                    child: Text('Press',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ))),
+              ),
+            )
+          ],
         )));
   }
 }
