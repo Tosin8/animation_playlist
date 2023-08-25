@@ -48,6 +48,7 @@ class _widget4State extends State<widget4> with TickerProviderStateMixin {
               child: AnimatedIcon(
                 icon: AnimatedIcons.play_pause,
                 progress: _controller,
+                size: 150,
               )),
         ));
   }
