@@ -21,9 +21,15 @@ class _Widget6State extends State<Widget6> {
             Padding(
               padding: const EdgeInsets.all(50),
               child: AnimatedRotation(
-                turns: turns,
-                duration: const Duration(milliseconds: 300),
+                turns: 0.0,
+                duration: Duration(milliseconds: 300),
+                child: const FlutterLogo(size: 100),
               ),
+            ),
+            ElevatedButton(
+              onPressed: onPressed,
+              child: Text('Rotate Logo'),
+              style: ElevatedButton.styleFrom(primary: Colors.orangeAccent),
             )
           ],
         )));
