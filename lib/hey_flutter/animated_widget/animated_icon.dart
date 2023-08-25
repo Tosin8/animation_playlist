@@ -36,13 +36,19 @@ class _widget4State extends State<widget4> with TickerProviderStateMixin {
         ),
         body: Center(
           child: GestureDetector(
-            onTap: () {
-              if (_isPlay == false) {
-                _controller.forward();
-                _isPlay = true;
-              }
-            },
-          ),
+              onTap: () {
+                if (_isPlay == false) {
+                  _controller.forward();
+                  _isPlay = true;
+                } else {
+                  _controller.reverse();
+                  _isPlay == false;
+                }
+              },
+              child: AnimatedIcon(
+                icon: AnimatedIcons.play_pause,
+                progress: _controller,
+              )),
         ));
   }
 }
