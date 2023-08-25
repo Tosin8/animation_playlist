@@ -10,6 +10,12 @@ class widget5 extends StatefulWidget {
 class _widget5State extends State<widget5> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Animated List'),
+        ),
+        body: Column(
+          children: [],
+        ));
   }
 }
