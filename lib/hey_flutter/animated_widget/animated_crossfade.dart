@@ -14,13 +14,12 @@ class _widget3State extends State<widget3> {
     return Scaffold(
         appBar: AppBar(
           elevation: 3,
-          title: Text('Animated Crossfade'),
+          title: const Text('Animated Crossfade'),
         ),
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               width: double.infinity,
-              height: 100,
             ),
             TextButton(
                 onPressed: () {
@@ -28,11 +27,26 @@ class _widget3State extends State<widget3> {
                     _bool = !_bool;
                   });
                 },
-                child: Text(
+                child: const Text(
                   'Switch',
-                  style: TextStyle(color: Colors.white),
-                ))
+                  style: TextStyle(color: Colors.blue),
+                )),
+            AnimatedCrossFade(
+                firstChild: _firstChild,
+                secondChild: Image.asset(
+                  'assets/images/pancake.jpg',
+                  width: double.infinity,
+                ),
+                crossFadeState: _bool
+                    ? CrossFadeState.showFirst
+                    : CrossFadeState.showSecond,
+                duration: Duration(seconds: 5))
           ],
         ));
   }
 }
+
+Image _firstChild = Image.asset(
+  'assets/images/pizza.jpg',
+  width: double.infinity,
+);
