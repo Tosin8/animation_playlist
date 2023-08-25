@@ -11,15 +11,19 @@ class _widget7State extends State<widget7> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
-        toolbarHeight: 80,
-        centerTitle: true,
-        title: Text(
-          'Animated Switcher',
-          style: TextStyle(color: Colors.white),
+        appBar: AppBar(
+          backgroundColor: Colors.grey,
+          toolbarHeight: 80,
+          centerTitle: true,
+          title: Text(
+            'Animated Switcher',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
-      ),
-    );
+        body: Center(
+          child: Column(
+            children: [AnimatedSwitcher(duration: Duration(milliseconds: 500))],
+          ),
+        ));
   }
 }
