@@ -1,32 +1,52 @@
 import 'package:animation_playlist/hey_flutter/onboarding/onboarding_home.dart';
 import 'package:animation_playlist/hey_flutter/onboarding/onboarding_screen.dart';
+// ignore: unused_import
 import 'package:animation_playlist/hey_flutter/screen_challenge/screen_challenge.dart';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// void main() {
-//   runApp(const MyApp());
-// }
+import 'hey_flutter/animated_widget/animated_align.dart';
 
-Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  final prefs = await SharedPreferences.getInstance();
-  final showHome = prefs.getBool('showHome') ?? false;
-
-  runApp(MyApp(showHome: showHome));
+void main() {
+  runApp(const MyApp());
 }
 
+// Future main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+
+//   final prefs = await SharedPreferences.getInstance();
+//   final showHome = prefs.getBool('showHome') ?? false;
+
+//   runApp(MyApp(showHome: showHome));
+// }
+
+// class MyApp extends StatelessWidget {
+//   final bool showHome;
+
+//   const MyApp({
+//     super.key,
+//     required this.showHome,
+//   });
+
+//   // This widget is the root of your application, being used in onboarding.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+//         useMaterial3: true,
+//       ),
+//       debugShowCheckedModeBanner: false,
+//       home: showHome ? const OnboardHome() : const OnBoardingPage(),
+//     );
+//   }
+// }
+
 class MyApp extends StatelessWidget {
-  final bool showHome;
+  const MyApp({super.key});
 
-  const MyApp({
-    super.key,
-    required this.showHome,
-  });
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,7 +56,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: showHome ? const OnboardHome() : const OnBoardingPage(),
+      home: widget1(),
     );
   }
 }
