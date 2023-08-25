@@ -34,6 +34,15 @@ class _widget4State extends State<widget4> with TickerProviderStateMixin {
           elevation: 5,
           title: Text('Animated Icon'),
         ),
-        body: Center());
+        body: Center(
+          child: GestureDetector(
+            onTap: () {
+              if (_isPlay == false) {
+                _controller.forward();
+                _isPlay = true;
+              }
+            },
+          ),
+        ));
   }
 }
