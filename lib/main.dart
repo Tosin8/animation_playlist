@@ -1,5 +1,6 @@
 import 'package:animation_playlist/hey_flutter/animated_widget/animated_builder.dart';
 import 'package:animation_playlist/hey_flutter/animated_widget/animated_crossfade.dart';
+import 'package:animation_playlist/hey_flutter/animated_widget/animated_icon.dart';
 import 'package:animation_playlist/hey_flutter/onboarding/onboarding_home.dart';
 import 'package:animation_playlist/hey_flutter/onboarding/onboarding_screen.dart';
 // ignore: unused_import
@@ -58,7 +59,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: widget3(),
+      home: widget4(),
     );
   }
 }
