@@ -10,6 +10,8 @@ class Screen1 extends StatefulWidget {
 class _Screen1State extends State<Screen1> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold (appBar: AppBar(
+    title: const Text("Screen 1 ')
+  ),));
   }
 }
