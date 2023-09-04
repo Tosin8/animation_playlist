@@ -14,18 +14,22 @@ class _StructureState extends State<Structure> {
         appBar: AppBar(
           title: Text('Structure'),
         ),
-        body: Center(
-          child: Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              Container(color: Colors.yellow, width: 300, height: 300),
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.indigo,
+        body: Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Container(color: Colors.red),
+            ),
+            Expanded(
+              flex: 2,
+              child: Column(
+                children: [
+                  Expanded(flex: 2, child: Container(color: Colors.blue)),
+                  Expanded(flex: 3, child: Container(color: Colors.yellow))
+                ],
               ),
-            ],
-          ),
+            )
+          ],
         ));
   }
 }
