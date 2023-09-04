@@ -1,19 +1,8 @@
-import 'package:animation_playlist/hey_flutter/animated_widget/animated_builder.dart';
-import 'package:animation_playlist/hey_flutter/animated_widget/animated_crossfade.dart';
-import 'package:animation_playlist/hey_flutter/animated_widget/animated_icon.dart';
 import 'package:animation_playlist/hey_flutter/hero/hero_animation.dart';
-import 'package:animation_playlist/hey_flutter/onboarding/onboarding_home.dart';
-import 'package:animation_playlist/hey_flutter/onboarding/onboarding_screen.dart';
 // ignore: unused_import
 import 'package:animation_playlist/hey_flutter/screen_challenge/screen_challenge.dart';
 
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-import 'hey_flutter/animated_widget/animated_align.dart';
-import 'hey_flutter/animated_widget/animated_list.dart';
-import 'hey_flutter/animated_widget/animated_rotation.dart';
-import 'hey_flutter/animated_widget/animated_switcher.dart';
 
 void main() {
   runApp(const MyApp());
