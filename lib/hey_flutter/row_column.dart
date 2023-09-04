@@ -16,6 +16,7 @@ class _StructureState extends State<Structure> {
         ),
         body: Center(
           child: Stack(
+            clipBehavior: Clip.hardEdge,
             children: [
               Container(color: Colors.yellow, width: 300, height: 300),
               Positioned(
