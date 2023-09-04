@@ -16,18 +16,14 @@ class _StructureState extends State<Structure> {
         ),
         body: Center(
           child: Stack(
-            clipBehavior: Clip.hardEdge,
+            alignment: Alignment.bottomCenter,
             children: [
               Container(color: Colors.yellow, width: 300, height: 300),
-              Positioned(
-                top: 30,
-                right: 20,
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.indigo,
-                ),
-              )
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.indigo,
+              ),
             ],
           ),
         ));
