@@ -18,10 +18,14 @@ class _StructureState extends State<Structure> {
           child: Stack(
             children: [
               Container(color: Colors.yellow, width: 300, height: 300),
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.indigo,
+              Positioned(
+                top: 30,
+                right: 20,
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.indigo,
+                ),
               )
             ],
           ),
