@@ -4,6 +4,7 @@ import 'package:animation_playlist/hey_flutter/screen_challenge/screen_challenge
 import 'package:flutter/material.dart';
 
 import 'hey_flutter/animated_icon.dart';
+import 'vandad/state_mgt/inherited_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,7 +54,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Animated_Icon(),
+      home: name(),
     );
   }
 }
