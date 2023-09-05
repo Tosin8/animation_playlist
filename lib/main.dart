@@ -1,9 +1,9 @@
-import 'package:animation_playlist/hey_flutter/hero/hero_animation.dart';
-import 'package:animation_playlist/hey_flutter/row_column.dart';
 // ignore: unused_import
 import 'package:animation_playlist/hey_flutter/screen_challenge/screen_challenge.dart';
 
 import 'package:flutter/material.dart';
+
+import 'hey_flutter/animated_icon.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Structure(),
+      home: Animated_Icon(),
     );
   }
 }

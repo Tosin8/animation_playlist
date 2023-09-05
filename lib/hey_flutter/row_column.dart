@@ -12,7 +12,8 @@ class _StructureState extends State<Structure> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Structure'),
+          title: const Text('Structure'),
+          centerTitle: true,
         ),
         body: Row(
           children: [
