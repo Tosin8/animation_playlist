@@ -37,7 +37,7 @@ final colors = [
   Colors.deepPurple,
 ];
 
-
+enum AvailableColors { one, two }
 
 // grabbing random colors elements.
 extension RandomElement<T> on Iterable<T> {
