@@ -30,6 +30,7 @@ class _inherit_modelState extends State<inherit_model> {
             child: Column(
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton(
                       onPressed: () {
