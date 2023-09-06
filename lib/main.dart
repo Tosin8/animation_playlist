@@ -92,7 +92,8 @@ class _inherit_modelState extends State<inherit_model> {
             'Inherit Model',
             style: TextStyle(color: Colors.white),
           ),
-          backgroundColor: Colors.deepPurple),
+          centerTitle: true,
+          backgroundColor: Colors.black45),
     );
   }
 }
