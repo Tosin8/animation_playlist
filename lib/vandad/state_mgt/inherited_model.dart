@@ -73,7 +73,7 @@ class AvailableColorsWidget extends InheritedModel<AvailableColors> {
   bool updateShouldNotify(covariant AvailableColorsWidget oldWidget) {
     devtools.log(
         'updateShouldNotify'); // making it to be utilized using the dart:developer tools.
-        
+
     // TODO: implement updateShouldNotify
     // throw UnimplementedError();
     return color1 != oldWidget.color1 || color2 != oldWidget.color2;
@@ -81,10 +81,22 @@ class AvailableColorsWidget extends InheritedModel<AvailableColors> {
 
   @override
   bool updateShouldNotifyDependent(
-      covariant InheritedModel<AvailableColors> oldWidget,
-      Set<AvailableColors> dependencies) {
+    covariant AvailableColorsWidget oldWidget,
+    Set<AvailableColors> dependencies,
+  ) {
     // TODO: implement updateShouldNotifyDependent
-    throw UnimplementedError();
+    //  throw UnimplementedError();
+    devtools.log(
+        'updateShouldNotifyDependent'); // making it to be utilized using the dart:develop
+    if (dependencies.contains(AvailableColors.one) &&
+        color1 != oldWidget.color1) {
+      return true;
+    }
+
+    if (dependencies.contains(AvailableColors.two) &&
+        color2 != oldWidget.color2) {
+      return true;
+    }
   }
 }
 
