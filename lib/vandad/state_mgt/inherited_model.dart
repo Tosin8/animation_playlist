@@ -47,13 +47,16 @@ class AvailableColorsWidget extends InheritedModel<AvailableColors> {
   final AvailableColors color1;
   final AvailableColors color2;
 
-  AvailableColorsWidget(
-      {super.key,
-      required super.child,
-      required this.color1,
-      required this.color2});
-
   /// Creating constructor.
+  AvailableColorsWidget(
+      {Key? key,
+      required Widget child,
+      required this.color1,
+      required this.color2})
+      : super(
+          key: key,
+          child: child,
+        );
 }
 
 // grabbing random colors elements.
