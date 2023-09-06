@@ -39,6 +39,9 @@ final colors = [
 
 enum AvailableColors { one, two }
 
+// creating the first inherit model
+class AvailableColorsWidget extends InheritedModel<AvailableColors> {}
+
 // grabbing random colors elements.
 extension RandomElement<T> on Iterable<T> {
   T getRandomElement() => elementAt(Random().nextInt(length));
