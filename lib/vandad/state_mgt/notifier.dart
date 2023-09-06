@@ -23,11 +23,18 @@ class _DemoNotifyState extends State<DemoNotify> {
           children: [
             Slider(value: 0.0, onChanged: (value) {}),
             Row(
+              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Container(
                   color: Colors.yellow,
                   height: 100,
-                )
+                  width: 100,
+                ),
+                Container(
+                  color: Colors.blue,
+                  height: 100,
+                  width: 100,
+                ),
               ],
             )
           ],
