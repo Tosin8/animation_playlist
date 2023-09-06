@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class inherit_model extends StatefulWidget {
@@ -35,4 +37,7 @@ final colors = [
   Colors.deepPurple,
 ];
 
-// grabbing random colors elements. 
+// grabbing random colors elements.
+extension RandomElement<T> on Iterable<T> {
+  T getRandomElement() => elementAt(Random().nextInt(length));
+}
