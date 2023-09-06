@@ -25,15 +25,34 @@ class _inherit_modelState extends State<inherit_model> {
             centerTitle: true,
             backgroundColor: Colors.black45),
         body: AvailableColorsWidget(
+            color1: color1,
+            color2: color2,
             child: Column(
               children: [
                 Row(
-                  children: [TextButton(onPressed: () {}, child: child)],
-                )
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        setState(() {
+                          color1 = colors.getRandomElement();
+                        });
+                      },
+                      child: Text('Change Color 1'),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        setState(() {
+                          color2 = colors.getRandomElement();
+                        });
+                      },
+                      child: Text('Change Color 2'),
+                    ),
+                  ],
+                ),
+                const ColorWidget(color: AvailableColors.one),
+                const ColorWidget(color: AvailableColors.two),
               ],
-            ),
-            color1: color1,
-            color2: color2));
+            )));
   }
 }
 
