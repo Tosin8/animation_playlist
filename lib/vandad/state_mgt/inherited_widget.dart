@@ -35,7 +35,10 @@ class _nameState extends State<name> {
               },
               child: Center(
                   child: Container(
-                      color: Colors.blue, child: const Text('Tap the Screen'))),
+                      color: Colors.blue,
+                      child: DateTimeWidget(
+                        key: _textKey,
+                      ))),
             ),
           ],
         ));
