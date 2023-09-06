@@ -1,3 +1,4 @@
+import 'package:animation_playlist/vandad/state_mgt/notifier.dart';
 import 'package:flutter/material.dart';
 
 import 'vandad/state_mgt/inherited_model.dart';
@@ -57,7 +58,30 @@ import 'vandad/state_mgt/inherited_model.dart';
 
 // RUN FOR INHERITED MODELS.
 
-import 'dart:developer' as devtools show log;
+// import 'dart:developer' as devtools show log;
+
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+//         useMaterial3: true,
+//       ),
+//       debugShowCheckedModeBanner: false,
+//       home: const inherit_model(),
+//     );
+//   }
+// }
+
+// run for notifier.
 
 void main() {
   runApp(const MyApp());
@@ -75,7 +99,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const inherit_model(),
+      home: const DemoNotify(),
     );
   }
 }
