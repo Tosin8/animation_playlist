@@ -54,7 +54,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: name(),
+      home: ApiProvider(
+        api: Api(),
+        child: const name(),
+      ),
     );
   }
 }

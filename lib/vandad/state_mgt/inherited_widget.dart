@@ -79,3 +79,15 @@ class ApiProvider extends InheritedWidget {
     return context.dependOnInheritedWidgetOfExactType<ApiProvider>()!;
   }
 }
+
+// create datetimewidget to extends statelesswidget.
+
+class DateTimeWidget extends StatelessWidget {
+  const DateTimeWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final api = ApiProvider.of(context).api;
+    return Text(api.dateAndTime ?? 'Tap on Screen to fetch date and time');
+  }
+}
