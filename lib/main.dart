@@ -1,14 +1,4 @@
-// ignore: unused_import
-import 'package:animation_playlist/hey_flutter/screen_challenge/screen_challenge.dart';
-
 import 'package:flutter/material.dart';
-
-import 'hey_flutter/animated_icon.dart';
-import 'vandad/state_mgt/inherited_widget.dart';
-
-void main() {
-  runApp(const MyApp());
-}
 
 // Future main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
@@ -65,18 +55,44 @@ void main() {
 
 // RUN FOR INHERITED MODELS.
 
-class MyApp extends StatefulWidget {
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: const inherit_model(),
+    );
+  }
 }
 
-class _MyAppState extends State<MyApp> {
+class inherit_model extends StatefulWidget {
+  const inherit_model({super.key});
+
+  @override
+  State<inherit_model> createState() => _inherit_modelState();
+}
+
+class _inherit_modelState extends State<inherit_model> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Home Page')),
+      appBar: AppBar(
+          title: const Text(
+            'Inherit Model',
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Colors.deepPurple),
     );
   }
 }
