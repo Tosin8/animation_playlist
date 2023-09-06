@@ -60,8 +60,12 @@ class AvailableColorsWidget extends InheritedModel<AvailableColors> {
 
   // allowing grabbing a copy - descendants needs a way to grab a copy of this inherited model when being built.
 
-  static AvailableColorsWidget of(BuildContext context){
-    InheritedModel.inheritFrom<AvailableColorsWidget>(context,aspect: ); 
+  static AvailableColorsWidget of(
+      BuildContext context, AvailableColors aspect) {
+    return InheritedModel.inheritFrom<AvailableColorsWidget>(
+      context,
+      aspect: aspect,
+    )!;
   }
 }
 
