@@ -16,7 +16,7 @@ class _nameState extends State<name> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            Text(ApiProvider.of(context).api.dateAndTime ?? '') as String,
+            ApiProvider.of(context).api.dateAndTime ?? '',
             style: const TextStyle(color: Colors.white),
           ),
           centerTitle: true,
@@ -26,10 +26,9 @@ class _nameState extends State<name> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () {
-                setState(() {
-                  title = DateTime.now().toIso8601String();
-                });
+              onTap: () async {
+                final api = ApiProvider.of(context).api;
+                final dateAndTime = await api.dateAndTime!;
               },
               child: Center(
                   child: Container(
