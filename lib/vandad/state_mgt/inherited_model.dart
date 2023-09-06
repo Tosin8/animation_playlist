@@ -115,10 +115,13 @@ class ColorWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (color) {
       case AvailableColors.one:
-        devtools.log('Color1 widget got rebuilt');
+        devtools
+            .log('Color1 widget got rebuilt'); // adding logging to ColorWidget.
         // TODO: Handle this case.
         break;
       case AvailableColors.two:
+        devtools
+            .log('Color2 widget got rebuilt'); // adding logging to ColorWidget.
         // TODO: Handle this case.
         break;
     }
