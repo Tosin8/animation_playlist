@@ -97,10 +97,21 @@ class AvailableColorsWidget extends InheritedModel<AvailableColors> {
         color2 != oldWidget.color2) {
       return true;
     }
+    return false;
   }
 }
 
 // grabbing random colors elements.
 extension RandomElement<T> on Iterable<T> {
   T getRandomElement() => elementAt(Random().nextInt(length));
+}
+
+// creating the widgets.
+class ColorWidget extends StatelessWidget {
+  const ColorWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
 }
