@@ -67,6 +67,21 @@ class AvailableColorsWidget extends InheritedModel<AvailableColors> {
       aspect: aspect,
     )!;
   }
+
+  @override
+  bool updateShouldNotify(covariant AvailableColorsWidget oldWidget) {
+    // TODO: implement updateShouldNotify
+    // throw UnimplementedError();
+    return color1 != oldWidget.color1 || color2 != oldWidget.color2;
+  }
+
+  @override
+  bool updateShouldNotifyDependent(
+      covariant InheritedModel<AvailableColors> oldWidget,
+      Set<AvailableColors> dependencies) {
+    // TODO: implement updateShouldNotifyDependent
+    throw UnimplementedError();
+  }
 }
 
 // grabbing random colors elements.
