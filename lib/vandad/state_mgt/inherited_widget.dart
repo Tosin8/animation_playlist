@@ -8,9 +8,9 @@ class name extends StatefulWidget {
   State<name> createState() => _nameState();
 }
 
-String title = 'Tap the creen';
-
 class _nameState extends State<name> {
+  ValueKey _textKey = const ValueKey<String?>(null);
+  String title = 'Tap the Screen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
