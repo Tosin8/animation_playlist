@@ -42,8 +42,11 @@ class _DemoNotifyState extends State<DemoNotify> {
   }
 }
 
-
 // creating an extension method
-extension EqualEqually on Iterable<Widgt> {
-  Iterable<Widget> expandEqually() => map(w) =AboutDialog.expand
+extension EqualEqually on Iterable<Widget> {
+  Iterable<Widget> expandEqually() => map(
+        (w) => Expanded(
+          child: w,
+        ),
+      );
 }
