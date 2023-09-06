@@ -11,17 +11,25 @@ class inherit_model extends StatefulWidget {
 }
 
 class _inherit_modelState extends State<inherit_model> {
+  var color1 = Colors.yellow;
+  var color2 = Colors.blue;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text(
-            'Inherit Model',
-            style: TextStyle(color: Colors.white),
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.black45),
-    );
+        appBar: AppBar(
+            title: const Text(
+              'Inherit Model',
+              style: TextStyle(color: Colors.white),
+            ),
+            centerTitle: true,
+            backgroundColor: Colors.black45),
+        body: AvailableColorsWidget(
+            child: Column(
+              children: [],
+            ),
+            color1: color1,
+            color2: color2));
   }
 }
 
