@@ -108,10 +108,19 @@ extension RandomElement<T> on Iterable<T> {
 
 // creating the widgets.
 class ColorWidget extends StatelessWidget {
-  const ColorWidget({super.key});
+  final AvailableColors color;
+  const ColorWidget({super.key, required this.color});
 
   @override
   Widget build(BuildContext context) {
+    switch (color) {
+      case AvailableColors.one:
+        // TODO: Handle this case.
+        break;
+      case AvailableColors.two:
+        // TODO: Handle this case.
+        break;
+    }
     return Container();
   }
 }
