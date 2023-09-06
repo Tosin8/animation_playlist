@@ -11,14 +11,26 @@ class _DemoNotifyState extends State<DemoNotify> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Slider Demo',
-          style: TextStyle(color: Colors.white),
+        appBar: AppBar(
+          title: Text(
+            'Slider Demo',
+            style: TextStyle(color: Colors.white),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.black,
         ),
-        centerTitle: true,
-        backgroundColor: Colors.black,
-      ),
-    );
+        body: Column(
+          children: [
+            Slider(value: 0.0, onChanged: (value) {}),
+            Row(
+              children: <Widget>[
+                Container(
+                  color: Colors.yellow,
+                  height: 100,
+                )
+              ],
+            )
+          ],
+        ));
   }
 }
