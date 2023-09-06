@@ -48,7 +48,7 @@ class AvailableColorsWidget extends InheritedModel<AvailableColors> {
   final AvailableColors color2;
 
   /// Creating constructor.
-  AvailableColorsWidget(
+  const AvailableColorsWidget(
       {Key? key,
       required Widget child,
       required this.color1,
@@ -57,6 +57,12 @@ class AvailableColorsWidget extends InheritedModel<AvailableColors> {
           key: key,
           child: child,
         );
+
+  // allowing grabbing a copy - descendants needs a way to grab a copy of this inherited model when being built.
+
+  static AvailableColorsWidget of(BuildContext context){
+    InheritedModel.inheritFrom<AvailableColorsWidget>(context,aspect: ); 
+  }
 }
 
 // grabbing random colors elements.
