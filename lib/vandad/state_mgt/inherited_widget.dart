@@ -29,6 +29,9 @@ class _nameState extends State<name> {
               onTap: () async {
                 final api = ApiProvider.of(context).api;
                 final dateAndTime = await api.dateAndTime!;
+                setState(() {
+                  _textKey = ValueKey(dateAndTime);
+                });
               },
               child: Center(
                   child: Container(
