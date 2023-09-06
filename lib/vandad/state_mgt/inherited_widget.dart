@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uuid/uuid.dart';
 
 class name extends StatefulWidget {
   const name({super.key});
@@ -42,4 +43,26 @@ class _nameState extends State<name> {
 // creating a fake api class.
 class Api {
   String? dateAndTime;
+
+  Future<String> getDateAndTime() {
+    return Future.delayed(
+      Duration(seconds: 1),
+      () => DateTime.now().toIso8601String(),
+    ).then((value) {
+      dateAndTime = value;
+      return value;
+    });
+  }
+}
+
+class ApiProvider extends InheritedWidget {
+  final Api api;
+  late final String uuid;
+
+  ApiProvider({
+    Key? key,
+    required this.api,
+    required Widget child,
+  })  : uuid = Uuid().v4(),
+        super(key: key, child: child);
 }
