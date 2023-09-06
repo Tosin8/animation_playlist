@@ -42,22 +42,25 @@ void main() {
 //   }
 // }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// RUN FOR INHERITED WIDGETS. 
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      debugShowCheckedModeBanner: false,
-      home: ApiProvider(
-        api: Api(),
-        child: const name(),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+//         useMaterial3: true,
+//       ),
+//       debugShowCheckedModeBanner: false,
+//       home: ApiProvider(
+//         api: Api(),
+//         child: const name(),
+//       ),
+//     );
+//   }
+// }
+
+// RUN FOR INHERITED MODELS. 
