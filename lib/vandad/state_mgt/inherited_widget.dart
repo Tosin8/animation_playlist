@@ -66,10 +66,16 @@ class ApiProvider extends InheritedWidget {
   })  : uuid = Uuid().v4(),
         super(key: key, child: child);
 
+// when will the inheritedWidget be replaced..
   @override
   bool updateShouldNotify(covariant ApiProvider oldWidget) {
     // TODO: implement updateShouldNotify
     return uuid != oldWidget.uuid;
     // throw UnimplementedError();
+  }
+
+  // a way for dependents to get an instance.
+  static ApiProvider of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<ApiProvider>()!;
   }
 }
