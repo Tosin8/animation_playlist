@@ -24,9 +24,16 @@ class _nameState extends State<name> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(
-                child: Container(
-                    color: Colors.blue, child: const Text('Hello world'))),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  title = DateTime.now().toIso8601String();
+                });
+              },
+              child: Center(
+                  child: Container(
+                      color: Colors.blue, child: const Text('Tap the Screen'))),
+            ),
           ],
         ));
   }
