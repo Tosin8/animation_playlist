@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'dart:developer' as devtools show log;
 
 class inherit_model extends StatefulWidget {
   const inherit_model({super.key});
@@ -70,6 +71,9 @@ class AvailableColorsWidget extends InheritedModel<AvailableColors> {
 
   @override
   bool updateShouldNotify(covariant AvailableColorsWidget oldWidget) {
+    devtools.log(
+        'updateShouldNotify'); // making it to be utilized using the dart:developer tools.
+        
     // TODO: implement updateShouldNotify
     // throw UnimplementedError();
     return color1 != oldWidget.color1 || color2 != oldWidget.color2;
