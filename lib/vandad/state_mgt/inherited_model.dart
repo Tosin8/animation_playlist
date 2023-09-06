@@ -37,10 +37,24 @@ final colors = [
   Colors.deepPurple,
 ];
 
-enum AvailableColors { one, two }
+enum AvailableColors {
+  one,
+  two
+} // hoding on to two MaterialColor properties named color1 and color2.
 
 // creating the first inherit model
-class AvailableColorsWidget extends InheritedModel<AvailableColors> {}
+class AvailableColorsWidget extends InheritedModel<AvailableColors> {
+  final AvailableColors color1;
+  final AvailableColors color2;
+
+  AvailableColorsWidget(
+      {super.key,
+      required super.child,
+      required this.color1,
+      required this.color2});
+
+  /// Creating constructor.
+}
 
 // grabbing random colors elements.
 extension RandomElement<T> on Iterable<T> {
