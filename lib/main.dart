@@ -42,7 +42,7 @@ void main() {
 //   }
 // }
 
-// RUN FOR INHERITED WIDGETS. 
+// RUN FOR INHERITED WIDGETS.
 // class MyApp extends StatelessWidget {
 //   const MyApp({super.key});
 
@@ -63,4 +63,20 @@ void main() {
 //   }
 // }
 
-// RUN FOR INHERITED MODELS. 
+// RUN FOR INHERITED MODELS.
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Home Page')),
+    );
+  }
+}
