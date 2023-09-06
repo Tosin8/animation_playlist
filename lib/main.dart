@@ -97,3 +97,16 @@ class _inherit_modelState extends State<inherit_model> {
     );
   }
 }
+
+// creating an array of colors.
+final colors = [
+  Colors.blue,
+  Colors.red,
+  Colors.yellow,
+  Colors.orange,
+  Colors.cyan,
+  Colors.purple,
+  Colors.brown,
+  Colors.amber,
+  Colors.deepPurple,
+];
