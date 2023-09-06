@@ -57,6 +57,8 @@ import 'vandad/state_mgt/inherited_model.dart';
 
 // RUN FOR INHERITED MODELS.
 
+import 'dart:developer' as devtools show log;
+
 void main() {
   runApp(const MyApp());
 }
