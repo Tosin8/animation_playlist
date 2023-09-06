@@ -7,7 +7,7 @@ class name extends StatefulWidget {
   State<name> createState() => _nameState();
 }
 
-String title = 'tap the scren';
+String title = 'Tap the creen';
 
 class _nameState extends State<name> {
   @override
@@ -21,11 +21,18 @@ class _nameState extends State<name> {
           centerTitle: true,
           backgroundColor: Colors.black,
         ),
-        body: GestureDetector(
-          onTap: () {
-          setState(() {
-            title = DateTime.now().toIso8601String();
-          });
-        }));
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+                child: Container(
+                    color: Colors.blue, child: const Text('Hello world'))),
+          ],
+        ));
   }
+}
+
+// creating a fake api class.
+class Api {
+  String? dateAndTime;
 }
