@@ -27,22 +27,20 @@ class _DemoNotifyState extends State<DemoNotify> {
               children: <Widget>[
                 Container(
                   color: Colors.yellow,
-                  height: 100,
-                  width: 100,
+                  height: 200,
                 ),
                 Container(
                   color: Colors.blue,
-                  height: 100,
-                  width: 100,
+                  height: 200,
                 ),
-              ],
+              ].expandEqually().toList(),
             )
           ],
         ));
   }
 }
 
-// creating an extension method
+// creating an extension method to fixing the widths of the containers.
 extension EqualEqually on Iterable<Widget> {
   Iterable<Widget> expandEqually() => map(
         (w) => Expanded(
@@ -50,3 +48,6 @@ extension EqualEqually on Iterable<Widget> {
         ),
       );
 }
+
+// creating the state manager.
+class SliderData extends ChangeNotifier {}
