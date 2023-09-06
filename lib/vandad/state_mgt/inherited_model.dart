@@ -45,8 +45,8 @@ enum AvailableColors {
 
 // creating the first inherit model
 class AvailableColorsWidget extends InheritedModel<AvailableColors> {
-  final AvailableColors color1;
-  final AvailableColors color2;
+  final MaterialColor color1;
+  final MaterialColor color2;
 
   /// Creating constructor.
   const AvailableColorsWidget(
@@ -125,6 +125,14 @@ class ColorWidget extends StatelessWidget {
         // TODO: Handle this case.
         break;
     }
-    return Container();
+
+    final provider = AvailableColorsWidget.of(
+      context,
+      color,
+    );
+    return Container(
+      height: 100,
+      color: color == AvailableColors.one ? provider.color1 : provider.color2,
+    );
   }
 }
