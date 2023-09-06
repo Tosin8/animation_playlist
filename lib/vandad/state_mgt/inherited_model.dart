@@ -26,7 +26,11 @@ class _inherit_modelState extends State<inherit_model> {
             backgroundColor: Colors.black45),
         body: AvailableColorsWidget(
             child: Column(
-              children: [],
+              children: [
+                Row(
+                  children: [TextButton(onPressed: () {}, child: child)],
+                )
+              ],
             ),
             color1: color1,
             color2: color2));
