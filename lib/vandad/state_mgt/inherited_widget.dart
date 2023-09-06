@@ -10,13 +10,13 @@ class name extends StatefulWidget {
 
 class _nameState extends State<name> {
   ValueKey _textKey = const ValueKey<String?>(null);
-  String title = 'Tap the Screen';
+  //String title = 'Tap the Screen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            title,
+            Text(ApiProvider.of(context).api.dateAndTime ?? '') as String,
             style: const TextStyle(color: Colors.white),
           ),
           centerTitle: true,
