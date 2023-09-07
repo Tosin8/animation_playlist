@@ -50,4 +50,19 @@ extension EqualEqually on Iterable<Widget> {
 }
 
 // creating the state manager.
-class SliderData extends ChangeNotifier {}
+class SliderData extends ChangeNotifier {
+  double _value = 0.0;
+
+  // creating set and getter methods  .
+  double get value => _value;
+  set value(double newValue) {
+    if (newValue != _value) {
+      _value = newValue;
+      notifyListeners();
+    }
+  }
+}
+
+// creating an instance of inheritedNotifier to hold onto the sliderData.
+
+final sliderData = SliderData();
