@@ -68,4 +68,10 @@ class SliderData extends ChangeNotifier {
 final sliderData = SliderData();
 
 // creating own inheritedNotifier.
-class SliderInheritedNotifer extends InheritedNotifier<SliderData> {}
+class SliderInheritedNotifer extends InheritedNotifier<SliderData> {
+  SliderInheritedNotifer({
+    Key? key,
+    required SliderData sliderData,
+    required Widget child,
+  }) : super(key: key, notifier: sliderData, child: child);
+}
