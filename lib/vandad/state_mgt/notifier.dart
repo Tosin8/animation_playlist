@@ -21,33 +21,37 @@ class _DemoNotifyState extends State<DemoNotify> {
         ),
         body: SliderInheritedNotifer(
           sliderData: sliderData,
-          child: Column(
-            children: [
-              Slider(
-                  value: 0.0,
-                  onChanged: (value) {
-                    sliderData.value = value;
-                  }),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: <Widget>[
-                  Opacity(
-                    opacity: SliderInheritedNotifer.of(context),
-                    child: Container(
-                      color: Colors.yellow,
-                      height: 200,
-                    ),
-                  ),
-                  Opacity(
-                    opacity: SliderInheritedNotifer.of(context),
-                    child: Container(
-                      color: Colors.blue,
-                      height: 200,
-                    ),
-                  ),
-                ].expandEqually().toList(),
-              )
-            ],
+          child: Builder(
+            builder: (context) {
+              return Column(
+                children: [
+                  Slider(
+                      value: 0.0,
+                      onChanged: (value) {
+                        sliderData.value = value;
+                      }),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      Opacity(
+                        opacity: SliderInheritedNotifer.of(context),
+                        child: Container(
+                          color: Colors.yellow,
+                          height: 200,
+                        ),
+                      ),
+                      Opacity(
+                        opacity: SliderInheritedNotifer.of(context),
+                        child: Container(
+                          color: Colors.blue,
+                          height: 200,
+                        ),
+                      ),
+                    ].expandEqually().toList(),
+                  )
+                ],
+              );
+            },
           ),
         ));
   }
