@@ -12,7 +12,7 @@ class _DemoNotifyState extends State<DemoNotify> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Slider Demo',
             style: TextStyle(color: Colors.white),
           ),
@@ -20,19 +20,30 @@ class _DemoNotifyState extends State<DemoNotify> {
           backgroundColor: Colors.black,
         ),
         body: SliderInheritedNotifer(
+          sliderData: sliderData,
           child: Column(
             children: [
-              Slider(value: 0.0, onChanged: (value) {}),
+              Slider(
+                  value: 0.0,
+                  onChanged: (value) {
+                    sliderData.value = value;
+                  }),
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
-                  Container(
-                    color: Colors.yellow,
-                    height: 200,
+                  Opacity(
+                    opacity: SliderInheritedNotifer.of(context),
+                    child: Container(
+                      color: Colors.yellow,
+                      height: 200,
+                    ),
                   ),
-                  Container(
-                    color: Colors.blue,
-                    height: 200,
+                  Opacity(
+                    opacity: SliderInheritedNotifer.of(context),
+                    child: Container(
+                      color: Colors.blue,
+                      height: 200,
+                    ),
                   ),
                 ].expandEqually().toList(),
               )
