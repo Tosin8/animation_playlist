@@ -66,3 +66,6 @@ class SliderData extends ChangeNotifier {
 // creating an instance of inheritedNotifier to hold onto the sliderData.
 
 final sliderData = SliderData();
+
+// creating own inheritedNotifier.
+class SliderInheritedNotifer extends InheritedNotifier<SliderData> {}
