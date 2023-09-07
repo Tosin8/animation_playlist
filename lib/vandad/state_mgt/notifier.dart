@@ -19,23 +19,25 @@ class _DemoNotifyState extends State<DemoNotify> {
           centerTitle: true,
           backgroundColor: Colors.black,
         ),
-        body: Column(
-          children: [
-            Slider(value: 0.0, onChanged: (value) {}),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[
-                Container(
-                  color: Colors.yellow,
-                  height: 200,
-                ),
-                Container(
-                  color: Colors.blue,
-                  height: 200,
-                ),
-              ].expandEqually().toList(),
-            )
-          ],
+        body: SliderInheritedNotifer(
+          child: Column(
+            children: [
+              Slider(value: 0.0, onChanged: (value) {}),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: <Widget>[
+                  Container(
+                    color: Colors.yellow,
+                    height: 200,
+                  ),
+                  Container(
+                    color: Colors.blue,
+                    height: 200,
+                  ),
+                ].expandEqually().toList(),
+              )
+            ],
+          ),
         ));
   }
 }
@@ -76,11 +78,10 @@ class SliderInheritedNotifer extends InheritedNotifier<SliderData> {
   }) : super(key: key, notifier: sliderData, child: child);
 
 // allow easy access to the double value
-  static double of(BuildContext context) {
-    context
-            .dependOnInheritedWidgetOfExactType<SliderInheritedNotifer>()
-            ?.notifier
-            ?.value ??
-        0.0;
-  }
+  static double of(BuildContext context) =>
+      context
+          .dependOnInheritedWidgetOfExactType<SliderInheritedNotifer>()
+          ?.notifier
+          ?.value ??
+      0.0;
 }
