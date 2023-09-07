@@ -74,4 +74,10 @@ class SliderInheritedNotifer extends InheritedNotifier<SliderData> {
     required SliderData sliderData,
     required Widget child,
   }) : super(key: key, notifier: sliderData, child: child);
+  
+// allow easy access to the double value
+static double of(BuildContext context) {
+  context.dependOnInheritedWidgetOfExactType()
+}
+
 }
