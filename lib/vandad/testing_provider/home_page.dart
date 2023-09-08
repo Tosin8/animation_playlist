@@ -39,5 +39,6 @@ class BreadCrumb {
   bool operator ==(covariant BreadCrumb other) => uuid == other.uuid;
 
   @override
-  int get hashCode => super.hashCode;
+  int get hashCode => uuid.hashCode;
+  String get title => name + (isActive ? '>' : '');
 }
