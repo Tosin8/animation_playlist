@@ -137,7 +137,7 @@ import 'vandad/testing_provider/home_page.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
-    create: (BuildContext context) {},
+    create: (_) => BreadCrumbProvider(),
     child: MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -145,6 +145,9 @@ void main() {
       ),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
+      routes: {
+        '/new': (context) => const Material(),
+      },
     ),
   ));
 }
