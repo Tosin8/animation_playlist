@@ -39,7 +39,16 @@ class _CounterTimerState extends State<CounterTimer> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-          onPressed: _incrementCounter, child: Icon(Icons.add)),
+          onPressed: _incrementCounter,
+          tooltip: 'Increments',
+          child: Icon(Icons.add)),
     );
+  }
+}
+
+class Counter extends ChangeNotifier {
+  var count = 0;
+  void incrementCounter() {
+    count++;
   }
 }
