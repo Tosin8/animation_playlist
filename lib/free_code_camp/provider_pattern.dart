@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CounterTimer extends StatefulWidget {
-  const CounterTimer({super.key});
+class CounterTimer extends StatelessWidget {
+  // const CounterTimer({super.key});
 
-  @override
-  State<CounterTimer> createState() => _CounterTimerState();
-}
-
-class _CounterTimerState extends State<CounterTimer> {
   int counter = 0;
-  void _incrementCounter() {
-    setState(() {
-      counter++;
-    });
-  }
+
+  void incrementCounter() {}
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +31,7 @@ class _CounterTimerState extends State<CounterTimer> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-          onPressed: _incrementCounter,
+          onPressed: incrementCounter,
           tooltip: 'Increments',
           child: Icon(Icons.add)),
     );
@@ -48,7 +40,12 @@ class _CounterTimerState extends State<CounterTimer> {
 
 class Counter extends ChangeNotifier {
   var count = 0;
+  int get getCounter {
+    return count;
+  }
+
   void incrementCounter() {
     count++;
+    notifyListeners();
   }
 }

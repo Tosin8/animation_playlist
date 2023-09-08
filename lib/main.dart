@@ -1,5 +1,6 @@
 import 'package:animation_playlist/vandad/state_mgt/notifier.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'free_code_camp/provider_pattern.dart';
 import 'vandad/state_mgt/inherited_model.dart';
@@ -93,14 +94,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider.value(
+          value: Counter(),
+        )
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: CounterTimer(),
       ),
-      debugShowCheckedModeBanner: false,
-      home: const CounterTimer(),
     );
   }
 }
