@@ -42,3 +42,5 @@ class BreadCrumb {
   int get hashCode => uuid.hashCode;
   String get title => name + (isActive ? '>' : '');
 }
+
+class BreadCrumbProvider extends ChangeNotifier {}
