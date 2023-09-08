@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'free_code_camp/provider_pattern.dart';
+import 'geekforgeek/model/item_data.dart';
+import 'geekforgeek/model_provider.dart';
 import 'vandad/state_mgt/inherited_model.dart';
 
 // Future main() async {
@@ -84,30 +86,52 @@ import 'vandad/state_mgt/inherited_model.dart';
 // }
 
 // run for notifier.
+// SAMPLE: COUNTER TIMER SAMPLE.
+
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MultiProvider(
+//       providers: [
+//         ChangeNotifierProvider.value(
+//           value: Counter(),
+//         )
+//       ],
+//       child: MaterialApp(
+//         title: 'Flutter Demo',
+//         theme: ThemeData(
+//           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+//           useMaterial3: true,
+//         ),
+//         debugShowCheckedModeBanner: false,
+//         home: CounterTimer(),
+//       ),
+//     );
+//   }
+// }
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider.value(
-          value: Counter(),
-        )
-      ],
+    return ChangeNotifierProvider(
+      create: (context) => ItemData(),
       child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
         debugShowCheckedModeBanner: false,
-        home: CounterTimer(),
+        title: 'Provider Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.green,
+        ),
+        home: ItemList(),
       ),
     );
   }
