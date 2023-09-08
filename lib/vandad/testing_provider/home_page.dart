@@ -59,4 +59,18 @@ class BreadCrumbProvider extends ChangeNotifier {
     _items.add(breadcrumb);
     notifyListeners();
   }
+
+  void reset() {
+    _items.clear();
+    notifyListeners();
+  }
+}
+
+class BreadCrumbsWidget extends StatelessWidget {
+  const BreadCrumbsWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
 }
