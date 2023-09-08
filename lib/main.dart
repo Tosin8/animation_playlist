@@ -1,6 +1,7 @@
 import 'package:animation_playlist/vandad/state_mgt/notifier.dart';
 import 'package:flutter/material.dart';
 
+import 'free_code_camp/provider_pattern.dart';
 import 'vandad/state_mgt/inherited_model.dart';
 
 // Future main() async {
@@ -99,7 +100,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const DemoNotify(),
+      home: const CounterTimer(),
     );
   }
 }
