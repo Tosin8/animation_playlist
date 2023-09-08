@@ -1,3 +1,4 @@
+import 'package:animation_playlist/hey_flutter/screen_challenge/pages/homepage.dart';
 import 'package:animation_playlist/vandad/state_mgt/notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -116,23 +117,47 @@ import 'vandad/state_mgt/inherited_model.dart';
 //   }
 // }
 
+// ITEM LIST FOR PROVIDER.
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return ChangeNotifierProvider(
+//       create: (context) => ItemData(),
+//       child: MaterialApp(
+//         debugShowCheckedModeBanner: false,
+//         title: 'Provider Demo',
+//         theme: ThemeData(
+//           primarySwatch: Colors.green,
+//         ),
+//         home: ItemList(),
+//       ),
+//     );
+//   }
+// }
+
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(
+    title: 'Flutter Demo',
+    theme: ThemeData(
+      primarySwatch: Colors.blue,
+    ),
+    debugShowCheckedModeBanner: false,
+    home: HomePage(),
+  ));
 }
 
-class MyApp extends StatelessWidget {
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => ItemData(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Provider Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.green,
-        ),
-        home: ItemList(),
-      ),
+    return Scaffold(
+      appBar: AppBar(title: Text('Home Page')),
     );
   }
 }
