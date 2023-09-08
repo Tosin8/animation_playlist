@@ -15,7 +15,20 @@ class HomePage extends StatelessWidget {
           centerTitle: true,
         ),
         body: Column(
-          children: [TextButton(onPressed: () {}, child: child)],
+          children: [
+            TextButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    '/new',
+                  );
+                },
+                child: const Text('Add New Bread Crumb')),
+            TextButton(
+                onPressed: () {
+                  context.read<BreadCrumbProvider>().reset();
+                },
+                child: const Text('Reset')),
+          ],
         ));
   }
 }
