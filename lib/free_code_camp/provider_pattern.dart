@@ -11,25 +11,35 @@ class _CounterTimerState extends State<CounterTimer> {
   int counter = 0;
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Text(
-            'Counter Timer',
-            style: TextStyle(color: Colors.white),
-          ),
-          centerTitle: true,
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text(
+          'Counter Timer',
+          style: TextStyle(color: Colors.white),
         ),
-        body: Center(
-            child: Column(
+        centerTitle: true,
+      ),
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [],
-        )));
+          children: [
+            Text('You have pushed the button this many times: '),
+            Text(
+              '$counter',
+              style: TextStyle(color: Colors.black),
+            )
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: _incrementCounter, child: Icon(Icons.add)),
+    );
   }
 }
