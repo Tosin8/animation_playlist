@@ -26,7 +26,7 @@ class BreadCrumb {
     required this.name,
   }) : uuid = const Uuid().v4();
 
-  void active() {
+  void activate() {
     isActive = true;
   }
 
@@ -37,4 +37,7 @@ class BreadCrumb {
 
   @override
   bool operator ==(covariant BreadCrumb other) => uuid == other.uuid;
+
+  @override
+  int get hashCode => super.hashCode;
 }
