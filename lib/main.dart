@@ -1,13 +1,3 @@
-import 'package:animation_playlist/hey_flutter/screen_challenge/pages/homepage.dart';
-import 'package:animation_playlist/vandad/state_mgt/notifier.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import 'free_code_camp/provider_pattern.dart';
-import 'geekforgeek/model/item_data.dart';
-import 'geekforgeek/model_provider.dart';
-import 'vandad/state_mgt/inherited_model.dart';
-
 // Future main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
 
@@ -140,6 +130,10 @@ import 'vandad/state_mgt/inherited_model.dart';
 //   }
 // }
 
+import 'package:flutter/material.dart';
+
+import 'vandad/testing_provider/home_page.dart';
+
 void main() {
   runApp(MaterialApp(
     title: 'Flutter Demo',
@@ -147,8 +141,6 @@ void main() {
       primarySwatch: Colors.blue,
     ),
     debugShowCheckedModeBanner: false,
-    home: HomePage(),
+    home: const HomePage(),
   ));
 }
-
-
