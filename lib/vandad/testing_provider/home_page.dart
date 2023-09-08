@@ -1,3 +1,6 @@
+import 'dart:collection';
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
@@ -43,4 +46,17 @@ class BreadCrumb {
   String get title => name + (isActive ? '>' : '');
 }
 
-class BreadCrumbProvider extends ChangeNotifier {}
+class BreadCrumbProvider extends ChangeNotifier {
+  final List<BreadCrumb> _items = [];
+
+  // tending to creating an external read only access.
+  UnmodifiableListView<BreadCrumb> get item => UnmodifiableListView(_items);
+  // a function to add breadcrumbs
+  void add(BreadCrumb breadcrumb) {
+    for (final item in _items) {
+      item.activate();
+    }
+    _items.add(breadcrumb);
+    notifyListeners();
+  }
+}
