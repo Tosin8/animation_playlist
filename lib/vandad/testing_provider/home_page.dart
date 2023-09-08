@@ -2,6 +2,7 @@ import 'dart:collection';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:uuid/uuid.dart';
 
 class HomePage extends StatelessWidget {
@@ -25,6 +26,7 @@ class HomePage extends StatelessWidget {
                 child: const Text('Add New Bread Crumb')),
             TextButton(
                 onPressed: () {
+                  // communicating with the provider.
                   context.read<BreadCrumbProvider>().reset();
                 },
                 child: const Text('Reset')),
