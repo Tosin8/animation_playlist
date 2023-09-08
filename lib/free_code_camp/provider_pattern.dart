@@ -3,11 +3,10 @@ import 'package:provider/provider.dart';
 
 // ignore: must_be_immutable
 class CounterTimer extends StatelessWidget {
-  const CounterTimer({super.key});
+  //const CounterTimer({super.key});
 
   int counter = 0;
 
-  void incrementCounter() {}
   void incrementCounter(BuildContext context) {
     Provider.of<Counter>(context, listen: false).incrementCounter();
   }
@@ -37,7 +36,7 @@ class CounterTimer extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-          onPressed: incrementCounter,
+          onPressed: () => incrementCounter(context),
           tooltip: 'Increments',
           child: Icon(Icons.add)),
     );
