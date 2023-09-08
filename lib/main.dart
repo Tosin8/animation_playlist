@@ -131,16 +131,20 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'vandad/testing_provider/home_page.dart';
 
 void main() {
-  runApp(MaterialApp(
-    title: 'Flutter Demo',
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
+  runApp(ChangeNotifierProvider(
+    create: (BuildContext context) {},
+    child: MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: const HomePage(),
     ),
-    debugShowCheckedModeBanner: false,
-    home: const HomePage(),
   ));
 }

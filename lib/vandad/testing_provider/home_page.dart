@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: const Text('Home Page'),
         centerTitle: true,
       ),
     );
@@ -67,10 +67,22 @@ class BreadCrumbProvider extends ChangeNotifier {
 }
 
 class BreadCrumbsWidget extends StatelessWidget {
-  const BreadCrumbsWidget({super.key});
+  final UnmodifiableListView<BreadCrumb> breadCrumbs;
+  const BreadCrumbsWidget({super.key, required this.breadCrumbs});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Wrap(
+      children: breadCrumbs.map(
+        (breadCrumb) {
+          return Text(
+            breadCrumb.title,
+            style: TextStyle(
+              color: breadCrumb.isActive ? Colors.blue : Colors.black,
+            ),
+          );
+        },
+      ).toList(),
+    );
   }
 }
