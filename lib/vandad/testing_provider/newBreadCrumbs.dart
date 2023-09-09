@@ -25,6 +25,10 @@ class _NewBreadCrumbWidgetState extends State<NewBreadCrumbWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Add new bread crumb'),
+      ),
+    );
   }
 }
