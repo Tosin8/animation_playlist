@@ -17,6 +17,7 @@ class HomePage extends StatelessWidget {
         ),
         body: Column(
           children: [
+            Consumer<BreadCrumbProvider>(),
             TextButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed(
@@ -28,6 +29,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   // communicating with the provider.
                   context.read<BreadCrumbProvider>().reset();
+                  context.select((value) => null);
                 },
                 child: const Text('Reset')),
           ],
@@ -103,3 +105,4 @@ class BreadCrumbsWidget extends StatelessWidget {
     );
   }
 }
+ 
