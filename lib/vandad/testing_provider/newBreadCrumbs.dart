@@ -1,4 +1,6 @@
+import 'package:animation_playlist/vandad/testing_provider/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class NewBreadCrumbWidget extends StatefulWidget {
   const NewBreadCrumbWidget({super.key});
@@ -36,7 +38,20 @@ class _NewBreadCrumbWidgetState extends State<NewBreadCrumbWidget> {
               decoration: const InputDecoration(
                 hintText: 'Enter a new bread crumb...',
               ),
-            )
+            ),
+            TextButton(
+              onPressed: () {
+                final text = _controller.text;
+                if (text.isNotEmpty) {
+                  final breadCrumb = BreadCrumb(
+                    isActive: false,
+                    name: text,
+                  );
+                  context.read<BreadCrumbProvider>().add(breadCrumb);
+                }
+              },
+              child: const Text('Add'),
+            ),
           ],
         ));
   }
