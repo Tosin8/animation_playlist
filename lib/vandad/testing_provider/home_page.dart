@@ -17,7 +17,11 @@ class HomePage extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Consumer<BreadCrumbProvider>(),
+            Consumer<BreadCrumbProvider>(
+              builder: (context, value, child) {
+                return BreadCrumbsWidget(breadCrumbs: value.items);
+              },
+            ),
             TextButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed(
@@ -69,7 +73,7 @@ class BreadCrumbProvider extends ChangeNotifier {
   final List<BreadCrumb> _items = [];
 
   // tending to creating an external read only access.
-  UnmodifiableListView<BreadCrumb> get item => UnmodifiableListView(_items);
+  UnmodifiableListView<BreadCrumb> get items => UnmodifiableListView(_items);
   // a function to add breadcrumbs
   void add(BreadCrumb breadcrumb) {
     for (final item in _items) {
@@ -105,4 +109,3 @@ class BreadCrumbsWidget extends StatelessWidget {
     );
   }
 }
- 
