@@ -49,6 +49,14 @@ class NewBreadCrumbWidget extends StatefulWidget {
 }
 
 class _NewBreadCrumbWidgetState extends State<NewBreadCrumbWidget> {
+  late final TextEditingController _controller;
+
+  @override
+  void initState() {
+    _controller = TextEditingController();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container();
