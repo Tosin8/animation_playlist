@@ -41,6 +41,20 @@ class HomePage extends StatelessWidget {
   }
 }
 
+class NewBreadCrumbWidget extends StatefulWidget {
+  const NewBreadCrumbWidget({super.key});
+
+  @override
+  State<NewBreadCrumbWidget> createState() => _NewBreadCrumbWidgetState();
+}
+
+class _NewBreadCrumbWidgetState extends State<NewBreadCrumbWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
 class BreadCrumb {
   late bool isActive;
   late final String name;
