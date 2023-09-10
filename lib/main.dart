@@ -153,6 +153,7 @@
 //   ));
 // }
 
+import 'package:animation_playlist/hey_flutter/orientation_query.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -163,7 +164,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const Orientation_bld(),
     ),
   );
 }
