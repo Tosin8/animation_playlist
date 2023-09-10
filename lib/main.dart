@@ -130,24 +130,40 @@
 //   }
 // }
 
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+// import 'package:flutter/material.dart';
+// import 'package:provider/provider.dart';
 
-import 'vandad/testing_provider/home_page.dart';
+// import 'vandad/testing_provider/home_page.dart';
+// import 'vandad/testing_provider/newBreadCrumbs.dart';
+
+// void main() {
+//   runApp(ChangeNotifierProvider(
+//     create: (_) => BreadCrumbProvider(),
+//     child: MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//       ),
+//       debugShowCheckedModeBanner: false,
+//       home: const HomePage(),
+//       routes: {
+//         '/new': (context) => const NewBreadCrumbWidget(),
+//       },
+//     ),
+//   ));
+// }
+
+import 'package:flutter/material.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-    create: (_) => BreadCrumbProvider(),
-    child: MaterialApp(
+  runApp(
+    MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
-      routes: {
-        '/new': (context) => const Material(),
-      },
     ),
-  ));
+  );
 }

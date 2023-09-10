@@ -48,6 +48,7 @@ class _NewBreadCrumbWidgetState extends State<NewBreadCrumbWidget> {
                     name: text,
                   );
                   context.read<BreadCrumbProvider>().add(breadCrumb);
+                  Navigator.of(context).pop();
                 }
               },
               child: const Text('Add'),

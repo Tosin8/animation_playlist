@@ -15,33 +15,37 @@ class HomePage extends StatelessWidget {
           title: const Text('Home Page'),
           centerTitle: true,
         ),
-        body: Column(
-          children: [
-            Consumer<BreadCrumbProvider>(
-              builder: (context, value, child) {
-                return BreadCrumbsWidget(breadCrumbs: value.items);
-              },
-            ),
-            TextButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamed(
-                    '/new',
+        body: Align(
+          alignment: Alignment.center,
+          child: Column(
+            children: [
+              Consumer<BreadCrumbProvider>(
+                builder: (context, value, child) {
+                  return BreadCrumbsWidget(
+                    breadCrumbs: value.items,
+                    onTapped: (BreadCrumb) {},
                   );
                 },
-                child: const Text('Add New Bread Crumb')),
-            TextButton(
-                onPressed: () {
-                  // communicating with the provider.
-                  context.read<BreadCrumbProvider>().reset();
-                  context.select((value) => null);
-                },
-                child: const Text('Reset')),
-          ],
+              ),
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(
+                      '/new',
+                    );
+                  },
+                  child: const Text('Add New Bread Crumb')),
+              TextButton(
+                  onPressed: () {
+                    // communicating with the provider.
+                    context.read<BreadCrumbProvider>().reset();
+                    context.select((value) => null);
+                  },
+                  child: const Text('Reset')),
+            ],
+          ),
         ));
   }
 }
-
-
 
 class BreadCrumb {
   late bool isActive;
@@ -91,19 +95,28 @@ class BreadCrumbProvider extends ChangeNotifier {
   }
 }
 
+typedef OnBreadCrumbTapped = void Function(BreadCrumb);
+
 class BreadCrumbsWidget extends StatelessWidget {
+  final OnBreadCrumbTapped onTapped;
   final UnmodifiableListView<BreadCrumb> breadCrumbs;
-  const BreadCrumbsWidget({super.key, required this.breadCrumbs});
+  const BreadCrumbsWidget(
+      {super.key, required this.breadCrumbs, required this.onTapped});
 
   @override
   Widget build(BuildContext context) {
     return Wrap(
       children: breadCrumbs.map(
         (breadCrumb) {
-          return Text(
-            breadCrumb.title,
-            style: TextStyle(
-              color: breadCrumb.isActive ? Colors.blue : Colors.black,
+          return GestureDetector(
+            onTap: () {
+              onTapped(breadCrumb);
+            },
+            child: Text(
+              breadCrumb.title,
+              style: TextStyle(
+                color: breadCrumb.isActive ? Colors.blue : Colors.black,
+              ),
             ),
           );
         },
