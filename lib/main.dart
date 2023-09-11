@@ -156,6 +156,8 @@
 import 'package:animation_playlist/hey_flutter/orientation_query.dart';
 import 'package:flutter/material.dart';
 
+import 'hey_flutter/layoutbuild.dart';
+
 void main() {
   runApp(
     MaterialApp(
@@ -164,7 +166,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Orientation_bld(),
+      home: const LayoutScreen(),
     ),
   );
 }
