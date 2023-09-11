@@ -10,6 +10,20 @@ class LayoutScreen extends StatefulWidget {
 class _LayoutScreenState extends State<LayoutScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Layout Builder'),
+      ),
+      body: Container(
+        child: LayoutBuilder(builder: context, constraints){
+          final width = constraints.width; 
+          final height = constraints.height;
+
+          return Container(
+            child: Center();
+          )
+        },
+      )
+    );
   }
 }
