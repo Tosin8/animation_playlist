@@ -155,7 +155,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'hey_flutter/layoutbuild.dart';
+import 'using_clipping.dart';
 
 void main() {
   runApp(
@@ -165,7 +165,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const LayoutScreen(),
+      home: const Clipping(),
     ),
   );
 }
