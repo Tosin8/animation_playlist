@@ -8,22 +8,29 @@ class LayoutScreen extends StatefulWidget {
 }
 
 class _LayoutScreenState extends State<LayoutScreen> {
+  List<String> categories = [
+    'Hand Bag',
+    'Jewellery',
+    'Footwear',
+    'Dresses',
+    'Dock',
+    'Cat',
+  ];
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Layout Builder'),
-      ),
-      body: Container(
-        child: LayoutBuilder(builder: context, constraints){
-          final width = constraints.width; 
-          final height = constraints.height;
-
-          return Container(
-            child: Center();
-          )
-        },
-      )
-    );
+        appBar: AppBar(
+          title: const Text('Layout Builder'),
+        ),
+        body: SizedBox(
+          child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: categories.length,
+              itemBuilder: ((context, index) => Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 40),
+                    child: Text(categories[index]),
+                  ))),
+        ));
   }
 }
