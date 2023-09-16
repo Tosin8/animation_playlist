@@ -10,6 +10,14 @@ class Clipping extends StatefulWidget {
 class _ClippingState extends State<Clipping> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Using Clip'),
+        centerTitle: true,
+      ),
+      body: ListView(
+        children: [ClipRect()],
+      ),
+    );
   }
 }
