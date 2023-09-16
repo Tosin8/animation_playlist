@@ -16,7 +16,19 @@ class _ClippingState extends State<Clipping> {
         centerTitle: true,
       ),
       body: ListView(
-        children: [ClipRect()],
+        children: [
+          Container(
+            width: 80,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30.0),
+              child: Image(image: AssetImage('assets/images/berry.jpg')),
+            ),
+          ),
+          CircleAvatar(
+            backgroundImage: AssetImage('assets/images/food1.jpg'),
+            radius: 150,
+          )
+        ],
       ),
     );
   }
