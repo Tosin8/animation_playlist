@@ -15,13 +15,14 @@ class _Carosel_DesignState extends State<Carosel_Design> {
       body: Container(
           child: Column(
         children: [
-          Container(
-            height: 500,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: 
-              ) 
-              
+          GestureDetector(
+            onHorizontalDragEnd: (DragEndDetails details) {},
+            child: Container(
+              height: 500,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/berry.jpg'),
+                      fit: BoxFit.cover)),
             ),
           )
         ],
