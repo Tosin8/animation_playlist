@@ -165,7 +165,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Clipping(),
+      home: const Carosel_Design(),
     ),
   );
 }
