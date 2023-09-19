@@ -10,6 +10,22 @@ class Carosel_Design extends StatefulWidget {
 class _Carosel_DesignState extends State<Carosel_Design> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      //  appBar: AppBar(),
+      body: Container(
+          child: Column(
+        children: [
+          Container(
+            height: 500,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: 
+              ) 
+              
+            ),
+          )
+        ],
+      )),
+    );
   }
 }

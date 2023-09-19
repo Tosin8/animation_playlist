@@ -155,6 +155,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'ui_animation/carousel_design.dart';
 import 'using_clipping.dart';
 
 void main() {
