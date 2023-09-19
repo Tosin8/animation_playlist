@@ -9,7 +9,9 @@ class Carosel_Design extends StatefulWidget {
 
 class _Carosel_DesignState extends State<Carosel_Design> {
   final List<List<String>> products = [
-    
+    ['assets/imaes/food.jpg', 'Food Berry', '100 \$'],
+    ['assets/imaes/food1.jpg', 'Food Berry', '100 \$'],
+    ['assets/imaes/food2.jpg', 'Food Berry', '100 \$'],
   ];
   @override
   Widget build(BuildContext context) {
