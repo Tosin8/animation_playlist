@@ -8,6 +8,9 @@ class Carosel_Design extends StatefulWidget {
 }
 
 class _Carosel_DesignState extends State<Carosel_Design> {
+  final List<List<String>> products = [
+    
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
