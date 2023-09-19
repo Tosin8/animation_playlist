@@ -16,7 +16,10 @@ class _Carosel_DesignState extends State<Carosel_Design> {
           child: Column(
         children: [
           GestureDetector(
-            onHorizontalDragEnd: (DragEndDetails details) {},
+            onHorizontalDragEnd: (DragEndDetails details) {
+              if (details.velocity.pixelsPerSecond.dx > 0) {
+              } else if (details.velocity.pixelsPerSecond.dx < 0) {}
+            },
             child: Container(
               height: 500,
               decoration: const BoxDecoration(
