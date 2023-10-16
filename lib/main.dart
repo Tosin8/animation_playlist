@@ -154,6 +154,7 @@
 // }
 
 import 'package:animation_playlist/hey_flutter/animated_container.dart';
+import 'package:animation_playlist/hey_flutter/confetti.dart';
 import 'package:flutter/material.dart';
 
 import 'ui_animation/carousel_design.dart';
@@ -167,7 +168,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Animated_Container(),
+      home: const ConfettiSplash(),
     ),
   );
 }
