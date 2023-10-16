@@ -1,3 +1,4 @@
+import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 
 class ConfettiSplash extends StatefulWidget {
@@ -9,7 +10,7 @@ class ConfettiSplash extends StatefulWidget {
 
 class _ConfettiSplashState extends State<ConfettiSplash> {
   bool isPlaying = false;
-  final controller = ConfettiController();
+   final controller = ConfettiController();
   @override
   void dispose() {
     // TODO: implement dispose
@@ -17,6 +18,20 @@ class _ConfettiSplashState extends State<ConfettiSplash> {
   }
 
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text('Confetti App'),
+      ),
+
+      body: const Stack(
+        children: [
+          ConfettiWidget(
+            confettiController: ConfettiController: controller, 
+          shouldLoop: true,
+          ), 
+        ],
+      )
+    );
   }
 }
