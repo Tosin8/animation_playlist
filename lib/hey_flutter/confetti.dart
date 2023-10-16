@@ -39,11 +39,14 @@ class _ConfettiSplashState extends State<ConfettiSplash> {
             ),
             Center(
                 child: ElevatedButton(
+                    child: Text(isPlaying ? 'Stop' : 'Celebrate'),
                     onPressed: () {
                       if (isPlaying) {
-                        controller.stop(); 
-                    } else{controller.play(); 
-                    }; child: Text(isPlaying ? 'Stop' : 'Play')))
+                        controller.stop();
+                      } else {
+                        controller.play();
+                      }
+                    }))
           ],
         ));
   }

@@ -153,12 +153,8 @@
 //   ));
 // }
 
-import 'package:animation_playlist/hey_flutter/animated_container.dart';
 import 'package:animation_playlist/hey_flutter/confetti.dart';
 import 'package:flutter/material.dart';
-
-import 'ui_animation/carousel_design.dart';
-import 'using_clipping.dart';
 
 void main() {
   runApp(
