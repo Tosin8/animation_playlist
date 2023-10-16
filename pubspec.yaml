@@ -30,6 +30,7 @@ environment:
 dependencies:
   avatar_glow: ^2.0.2
   blurrycontainer: ^1.0.2
+  confetti: ^0.7.0
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
