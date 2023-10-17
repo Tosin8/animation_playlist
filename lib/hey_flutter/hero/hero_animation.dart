@@ -11,20 +11,18 @@ class _Screen1State extends State<Screen1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text("Screen 1 "),
-      ),
-      body: Center(
-        child: Container(
-          height: 250,
-          width: 600,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(80),
-          ),
-          // child: Image.asset('assets/images/food.jpg')
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text("Screen 1 "),
         ),
-      ),
-    );
+        body: Hero(
+          tag: image_1,
+          child: Center(
+              child: Container(
+                  height: 150,
+                  width: 200,
+                  child: Image.asset('assets/images/food.jpg',
+                      fit: BoxFit.cover))),
+        ));
   }
 }
