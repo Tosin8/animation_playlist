@@ -154,6 +154,7 @@
 // }
 
 import 'package:animation_playlist/hey_flutter/confetti.dart';
+import 'package:animation_playlist/hey_flutter/hero/hero_animation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -164,7 +165,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const ConfettiSplash(),
+      home: const Screen1(),
     ),
   );
 }
