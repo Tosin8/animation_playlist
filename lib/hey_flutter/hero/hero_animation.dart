@@ -21,7 +21,7 @@ class _Screen1State extends State<Screen1> {
           child: Center(
               child: GestureDetector(
             onTap: () => Navigator.of(context)
-                .push(MaterialPageRoute(builder: ((context) => Screen2()))),
+                .push(MaterialPageRoute(builder: (context) => Screen2())),
             child: Container(
                 height: 150,
                 width: 200,
