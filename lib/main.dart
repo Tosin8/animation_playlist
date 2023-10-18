@@ -155,6 +155,7 @@
 
 import 'package:animation_playlist/all_widgets/aboutListTile.dart';
 import 'package:animation_playlist/all_widgets/aboutdialog.dart';
+import 'package:animation_playlist/all_widgets/absorbpointer.dart';
 import 'package:animation_playlist/hey_flutter/confetti.dart';
 import 'package:animation_playlist/hey_flutter/hero/hero_animation.dart';
 import 'package:flutter/material.dart';
@@ -167,7 +168,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const aboutListTile(),
+      home: const absorbPainter(),
     ),
   );
 }
