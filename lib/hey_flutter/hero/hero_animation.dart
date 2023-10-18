@@ -1,3 +1,4 @@
+import 'package:animation_playlist/hey_flutter/hero/screen2.dart';
 import 'package:flutter/material.dart';
 
 class Screen1 extends StatefulWidget {
@@ -16,13 +17,17 @@ class _Screen1State extends State<Screen1> {
           title: const Text("Screen 1 "),
         ),
         body: Hero(
-          tag: image_1,
+          tag: 'image1',
           child: Center(
-              child: Container(
-                  height: 150,
-                  width: 200,
-                  child: Image.asset('assets/images/food.jpg',
-                      fit: BoxFit.cover))),
+              child: GestureDetector(
+            onTap: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: ((context) => Screen2()))),
+            child: Container(
+                height: 150,
+                width: 200,
+                child:
+                    Image.asset('assets/images/food.jpg', fit: BoxFit.cover)),
+          )),
         ));
   }
 }

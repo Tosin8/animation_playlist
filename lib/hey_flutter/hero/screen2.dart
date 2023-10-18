@@ -17,6 +17,9 @@ class _Screen1State extends State<Screen2> {
         ),
         body: AspectRatio(
             aspectRatio: 1,
-            child: Image.asset('assets/images/food.jpg', fit: BoxFit.cover)));
+            child: Hero(
+                tag: 'image1',
+                child:
+                    Image.asset('assets/images/food.jpg', fit: BoxFit.cover))));
   }
 }
