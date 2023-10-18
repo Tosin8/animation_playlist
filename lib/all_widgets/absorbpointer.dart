@@ -24,11 +24,13 @@ class _absorbPainterState extends State<absorbPainter> {
             SizedBox(
               height: 200.0,
               width: 100.0,
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.green.shade200),
-                  onPressed: () {},
-                  child: null),
+              child: AbsorbPointer(
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.green.shade200),
+                    onPressed: () {},
+                    child: null),
+              ),
             )
           ],
         ))));
