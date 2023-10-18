@@ -20,8 +20,8 @@ class _aboutListTileState extends State<aboutListTile> {
             applicationIcon: FlutterLogo(),
             applicationLegalese: 'Legalese',
             applicationName: 'Flutter App',
-            applicationVersion: 'version 1.0.0',
-            aboutBoxChildren: [Text('This is a text created by')],
+            applicationVersion: 'version 3.1.0',
+            aboutBoxChildren: [Text('This is a text created by Flutter Mapp')],
           ),
         ));
   }
