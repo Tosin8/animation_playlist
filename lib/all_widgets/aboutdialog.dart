@@ -22,7 +22,7 @@ class _aboutDialogState extends State<aboutDialog> {
                     context: context,
                     builder: (context) => const AboutDialog(
                           applicationIcon: FlutterLogo(),
-                          applicationLegalese: 'Legalese',
+                          applicationLegalese: 'Copy Right',
                           applicationName: 'Flutter App',
                           applicationVersion: 'version 1.0.0',
                           children: [
