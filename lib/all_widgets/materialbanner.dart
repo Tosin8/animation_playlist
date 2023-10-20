@@ -23,7 +23,12 @@ class _BannerMState extends State<BannerM> {
                   backgroundColor: Colors.white12,
                   content: Text('Subscribe'),
                   leading: const Icon(Icons.notifications_active_outlined),
-                  actions: actions));
+                  actions: [
+                    TextButton(
+                        onPressed: ScaffoldMessenger.of(context)
+                            .hideCurrentMaterialBanner(),
+                        child: Text('Dismiss'))
+                  ]));
             },
             child: Text('Open')),
       ),
