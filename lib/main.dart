@@ -160,6 +160,8 @@ import 'package:animation_playlist/hey_flutter/confetti.dart';
 import 'package:animation_playlist/hey_flutter/hero/hero_animation.dart';
 import 'package:flutter/material.dart';
 
+import 'all_widgets/materialbanner.dart';
+
 void main() {
   runApp(
     MaterialApp(
@@ -168,7 +170,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const absorbPainter(),
+      home: BannerM(),
     ),
   );
 }
