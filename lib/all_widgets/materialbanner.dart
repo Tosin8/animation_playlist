@@ -10,6 +10,23 @@ class BannerM extends StatefulWidget {
 class _BannerMState extends State<BannerM> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Material Banner'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showMaterialBanner(MaterialBanner(
+                  padding: const EdgeInsets.all(20),
+                  elevation: 5,
+                  backgroundColor: Colors.white12,
+                  content: Text('Subscribe'),
+                  leading: const Icon(Icons.notifications_active_outlined),
+                  actions: actions));
+            },
+            child: Text('Open')),
+      ),
+    );
   }
 }
