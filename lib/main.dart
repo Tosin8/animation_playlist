@@ -165,7 +165,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: BannerM(),
+      home: const BannerM(),
     ),
   );
 }
