@@ -12,7 +12,7 @@ class _BannerMState extends State<BannerM> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Material Banner'),
+        title: const Text('Material Banner'),
       ),
       body: Center(
         child: ElevatedButton(
@@ -21,16 +21,16 @@ class _BannerMState extends State<BannerM> {
                   padding: const EdgeInsets.all(20),
                   elevation: 5,
                   backgroundColor: Colors.white12,
-                  content: Text('Subscribe'),
+                  content: const Text('Subscribe'),
                   leading: const Icon(Icons.notifications_active_outlined),
                   actions: [
                     TextButton(
                         onPressed: ScaffoldMessenger.of(context)
                             .hideCurrentMaterialBanner(),
-                        child: Text('Dismiss'))
+                        child: const Text('Dismiss'))
                   ]));
             },
-            child: Text('Open')),
+            child: const Text('Open')),
       ),
     );
   }
