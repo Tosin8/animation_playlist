@@ -165,7 +165,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const BannerM(),
+      home: const Sydney(),
     ),
   );
 }
