@@ -155,7 +155,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'all_widgets/materialbanner.dart';
+import 'widget_catalog/animation_motion/Animated_Align.dart';
 
 void main() {
   runApp(
@@ -165,7 +165,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Sydney(),
+      home: const AnimatedAlignExample(),
     ),
   );
 }
