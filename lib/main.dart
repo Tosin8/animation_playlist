@@ -153,8 +153,11 @@
 //   ));
 // }
 
+import 'package:animation_playlist/explicit_animation/bounce.dart';
+import 'package:animation_playlist/implict_animation/animate_container.dart';
 import 'package:flutter/material.dart';
 
+import 'explicit_animation/lineargradient.dart';
 import 'widget_catalog/animation_motion/Animated_Align.dart';
 
 void main() {
@@ -165,7 +168,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const AnimatedAlignExample(),
+      home: const ExplicitAnimations(),
     ),
   );
 }

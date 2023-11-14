@@ -9,7 +9,6 @@ class AnimatedAlignExample extends StatefulWidget {
 
 class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
   bool selected = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,26 +22,34 @@ class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
               decoration: const BoxDecoration(color: Colors.red),
               child: AnimatedAlign(
                 alignment: selected ? Alignment.bottomRight : Alignment.topLeft,
-                duration: Duration(milliseconds: 1000),
-                child: FlutterLogo(
+                duration: const Duration(milliseconds: 1000),
+                curve: Curves.bounceOut,
+                child: const FlutterLogo(
                   size: 30,
                 ),
               ),
             ),
           ),
-          SizedBox(height: 10),
-          Container(
-            height: 40,
-            width: 180,
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(30),
+          const SizedBox(height: 10),
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                selected = !selected;
+              });
+            },
+            child: Container(
+              height: 40,
+              width: 180,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: const Align(
+                  child: Text(
+                'Press Me!',
+                style: TextStyle(color: Colors.white),
+              )),
             ),
-            child: Align(
-                child: Text(
-              'Press Me!',
-              style: TextStyle(color: Colors.white),
-            )),
           )
         ],
       ),

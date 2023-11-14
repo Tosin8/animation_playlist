@@ -49,25 +49,29 @@ class _ExplicitAnimationsState extends State<ExplicitAnimations>
 
   @override
   Widget build(BuildContext context) {
-    return BlurryContainer(
-      blur: 5,
-      width: 200,
-      height: 200,
-      elevation: 0,
-      color: Colors.transparent,
-      padding: const EdgeInsets.all(8),
-      borderRadius: const BorderRadius.all(Radius.circular(20)),
-      child: AlignTransition(
-        alignment: _alignAnimation,
-        child: RotationTransition(
-          turns: _rotationAnimation,
-          child: BlurryContainer.square(
-            child: Container(
-              decoration: const BoxDecoration(
-                color: Colors.pink,
+    return Scaffold(
+      body: Center(
+        child: BlurryContainer(
+          blur: 5,
+          width: double.infinity,
+          height: 200,
+          elevation: 0,
+          color: Colors.green,
+          padding: const EdgeInsets.all(8),
+          borderRadius: const BorderRadius.all(Radius.circular(20)),
+          child: AlignTransition(
+            alignment: _alignAnimation,
+            child: RotationTransition(
+              turns: _rotationAnimation,
+              child: BlurryContainer.square(
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.pink,
+                  ),
+                  width: 120,
+                  height: 120,
+                ),
               ),
-              width: 120,
-              height: 120,
             ),
           ),
         ),
