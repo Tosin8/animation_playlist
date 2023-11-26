@@ -153,6 +153,7 @@
 //   ));
 // }
 
+import 'package:animation_playlist/rough_practice.dart';
 import 'package:animation_playlist/ui_animation/carousel_design.dart';
 import 'package:flutter/material.dart';
 
@@ -164,7 +165,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Carosel_Design(),
+      home: const RoughPractice(),
     ),
   );
 }
