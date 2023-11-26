@@ -12,8 +12,12 @@ class RoughPractice extends StatelessWidget {
         body: CustomScrollView(
           slivers: [
             SliverList(
-                delegate: SliverChildListDelegate(
-                    [ListTile(title: Text('First Item'))]))
+                delegate: SliverChildListDelegate([
+              ListTile(title: Text('First Item')),
+              ListTile(title: Text('Second Item')),
+              ListTile(title: Text('Third Item')),
+              ListTile(title: Text('Fourth Item')),
+            ]))
           ],
         ));
   }
