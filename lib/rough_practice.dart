@@ -6,9 +6,12 @@ class RoughPractice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Rough Practice'),
-      ),
-    );
+        appBar: AppBar(
+          title: Text('Rough Practice'),
+        ),
+        body: CustomScrollView(
+          slivers: [],
+        )
+        ));
   }
 }
