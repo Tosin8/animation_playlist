@@ -153,9 +153,8 @@
 //   ));
 // }
 
-import 'package:animation_playlist/explicit_animation/bounce.dart';
+import 'package:animation_playlist/ui_animation/carousel_design.dart';
 import 'package:flutter/material.dart';
-
 
 void main() {
   runApp(
@@ -165,7 +164,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const ExplicitAnimations(),
+      home: const Carosel_Design(),
     ),
   );
 }
