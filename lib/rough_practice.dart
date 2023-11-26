@@ -17,7 +17,22 @@ class RoughPractice extends StatelessWidget {
               ListTile(title: Text('Second Item')),
               ListTile(title: Text('Third Item')),
               ListTile(title: Text('Fourth Item')),
-            ]))
+            ])),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Container(
+                  color: Colors.yellowAccent,
+                  child: Column(
+                    children: [
+                      FlutterLogo(size: 100),
+                      SizedBox(height: 20),
+                      Text(
+                        'This is the flutter logo',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  )),
+            )
           ],
         ));
   }
