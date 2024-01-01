@@ -23,6 +23,7 @@ class _AnimatingContainerState extends State<AnimatingContainer> {
                 stops: [ selected ? 0.2 : 0.5, 1.0])
               ),
               duration: const Duration(milliseconds: 1000),
+              curve: Curves.easeOutQuad,
               width: selected ? 80 : 120,
               height: selected ? 70 : 100,
              
