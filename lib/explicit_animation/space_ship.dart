@@ -20,7 +20,7 @@ class _Space_ShipState extends State<Space_Ship>
     // TODO: implement initState
     super.initState();
     _animationController =
-        AnimationController(duration: Duration(seconds: 5), vsync: this)
+        AnimationController(duration: const Duration(seconds: 5), vsync: this)
           ..repeat();
   }
 
@@ -43,11 +43,11 @@ class _Space_ShipState extends State<Space_Ship>
               animation: _animationController,
               builder: (_, __) {
                 return ClipPath(
-                  clipper: BeamClipper(),
+                  clipper: const BeamClipper(),
                   child: Container(
                       height: 1000,
                       decoration: BoxDecoration(
-                          gradient: RadialGradient(radius: 1.5, colors: [
+                          gradient: RadialGradient(radius: 1.5, colors: const [
                         Colors.yellow,
                         Colors.transparent,
                       ], stops: [
