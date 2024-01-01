@@ -35,3 +35,16 @@ class _Star_1State extends State<Star_1> {
     );
   }
 }
+
+/* Using Tween for Color filtered. 
+TweenAnimationBuilder(
+tween: ColorTween(begin: Colors.white, end: Colors.orange), 
+duration: Duration(seconds: 2), 
+builder: (_, Color color, _) {
+  return ColorFiltered(
+    child: Image.asset(''), 
+    colorFilter: ColorFilter.mode(color, BlendMode.modulate), 
+  )
+}, 
+)
+*/
