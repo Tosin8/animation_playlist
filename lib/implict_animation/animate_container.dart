@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class AnimatingContainer extends StatefulWidget {
@@ -53,5 +55,16 @@ class _AnimatingContainerState extends State<AnimatingContainer> {
         ],
       ),
     ));
+  }
+}
+
+
+class SineCurve extends Curve {
+  final double count; 
+  const SineCurve ({this.count = 1}); 
+
+  @override 
+  double transformInternal(double t) {
+    return sin(count * 2 * pi * t) * 0.5 + 0.5; 
   }
 }
