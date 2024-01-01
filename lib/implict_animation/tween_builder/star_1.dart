@@ -31,29 +31,38 @@ class _Star_1State extends State<Star_1> {
             horizontal: 30), 
             child: Column(
             children: [
-              // Center(
-              //     child: TweenAnimationBuilder(
-              //   duration: const Duration(milliseconds: 300),
-              //   tween: Tween<double>(begin: 0, end: 2 * math.pi),
-              //   builder: (_, double angle, __) {
-              //     return Transform.rotate(
-              //       angle: angle,
-              //       child: Image.network(
-              //           'https://images.unsplash.com/photo-1671600939110-7b0625c25ef5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80'),
-              //     );
-              //   },
-              // ))
-                    
+               Center(
+                 child: TweenAnimationBuilder(
+                  tween: ColorTween(
+                    begin: Colors.white, 
+                    end: Colors.orange),
+                  duration: Duration(seconds: 2),
+                  builder: (_, Color color, __) 
+                  {
+                    return ColorFiltered(
+                      colorFilter: ColorFilter.mode(color, BlendMode.modulate),
+                      child: Image.asset('assets/images/sun.png'),
+                   
+                    ); 
+                  },
+                 ),
+               )
+               
+               ]
+               )) 
+        ]));
+        
+                
+                
               
-               Image.asset('assets/images/sun.png'),
+               
               
-            ],
+    
                     
             
-                    ),
-          ),
-     ] ),
-    );
+                    
+          
+    
   }
 }
 
@@ -69,3 +78,16 @@ builder: (_, Color color, _) {
 }, 
 )
 */
+
+ // Center(
+              //     child: TweenAnimationBuilder(
+              //   duration: const Duration(milliseconds: 300),
+              //   tween: Tween<double>(begin: 0, end: 2 * math.pi),
+              //   builder: (_, double angle, __) {
+              //     return Transform.rotate(
+              //       angle: angle,
+              //       child: Image.network(
+              //           'https://images.unsplash.com/photo-1671600939110-7b0625c25ef5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80'),
+              //     );
+              //   },
+              // ))
