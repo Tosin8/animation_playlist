@@ -36,7 +36,7 @@ class _Star_1State extends State<Star_1> {
                   tween: ColorTween(
                     begin: Colors.white, 
                     end: Colors.orange),
-                  duration: const Duration(seconds: 2),
+                  duration: const Duration(seconds: 10),
                   builder: (_, Color?color, __) 
                   {
                     return ColorFiltered(
