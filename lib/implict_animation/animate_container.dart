@@ -17,11 +17,16 @@ class _AnimatingContainerState extends State<AnimatingContainer> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           AnimatedContainer(
-              // decoration: BoxDecoration(),
+              decoration: BoxDecoration(
+                 color: selected ? Colors.blue : Colors.green,
+                gradient: RadialGradient(colors: [Colors.purple, Colors.transparent], 
+                stops: [ selected ? 0.2 : 0.5, 1.0])
+              ),
               duration: const Duration(milliseconds: 1000),
               width: selected ? 80 : 120,
               height: selected ? 70 : 100,
-              color: selected ? Colors.blue : Colors.green,
+             
+            
               child: const FlutterLogo()),
           const SizedBox(height: 20),
           GestureDetector(
