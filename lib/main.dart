@@ -156,6 +156,8 @@
 import 'package:animation_playlist/rough_practice.dart';
 import 'package:flutter/material.dart';
 
+import 'implict_animation/animate_container.dart';
+
 void main() {
   runApp(const MyApp()); 
 } class MyApp extends StatelessWidget {
@@ -169,7 +171,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const RoughPractice(),
+      home:  AnimatingContainer(),
     
   );
 }
