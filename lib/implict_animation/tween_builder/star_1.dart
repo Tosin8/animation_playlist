@@ -36,11 +36,13 @@ class _Star_1State extends State<Star_1> {
                   tween: ColorTween(
                     begin: Colors.white, 
                     end: Colors.orange),
-                  duration: Duration(seconds: 2),
-                  builder: (_, Color color, __) 
+                  duration: const Duration(seconds: 2),
+                  builder: (_, Color?color, __) 
                   {
                     return ColorFiltered(
-                      colorFilter: ColorFilter.mode(color, BlendMode.modulate),
+                      colorFilter: ColorFilter.mode(
+                        color!,
+                         BlendMode.multiply),
                       child: Image.asset('assets/images/sun.png'),
                    
                     ); 
