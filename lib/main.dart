@@ -156,6 +156,7 @@
 import 'package:animation_playlist/explicit_animation/space_ship.dart';
 import 'package:animation_playlist/implict_animation/tween_builder/star_1.dart';
 import 'package:animation_playlist/pub_dev/glow_animation.dart';
+import 'package:animation_playlist/pub_dev/mansory.dart';
 import 'package:animation_playlist/rough_practice.dart';
 import 'package:flutter/material.dart';
 
@@ -174,7 +175,7 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home:  Avatar_Glow(),
+      home:  MansoryView(),
     
   );
 }
